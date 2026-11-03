@@ -1,0 +1,10 @@
+{
+  "name": "LipiScript - AI Handwritten Notes to Digital E-Book SaaS",
+  "description": "Transform Marathi, Hindi, English, and mixed handwritten notes into genuine digital text, professional searchable PDFs, and editable DOCX e-books.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

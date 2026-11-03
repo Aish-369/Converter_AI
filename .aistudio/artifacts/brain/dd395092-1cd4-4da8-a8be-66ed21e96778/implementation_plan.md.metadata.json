@@ -1,0 +1,6 @@
+{
+  "summary": "Canonical Gate 1 LipiScript Phase 0 Feasibility, Indic Handwriting Benchmark & Provisional System Architecture Document. Incorporates all verified candidate specifications as of November 3, 2026: Gemini 3.8 Flash pricing ($0.75/$3.75 through Dec 2026, $1.50/$7.50 from Jan 2027) with 55-day operational logging; Gemini 4 Argon paid-tier pricing ($2.00/$10.00 through Nov 2026, $4.00/$20.00 from Dec 2026); Google Cloud Vision with experimental Devanagari handwriting; OpenAI GPT-4o marked deprecated with announced API shutdown on Jan 14, 2027; OpenAI o1 marked shut down and ineligible for live testing; PaddleOCR-VL-1.6 with unverified cursive handwriting; exact 30-page dataset split (8 Marathi, 8 Hindi, 7 English, 7 Mixed; 10 reference transcripts from the same pool); rigorous scoring with NFC, code-point CER vs UAX #29 extended grapheme-cluster CER, disambiguation of aksharas vs grapheme clusters, pre-annotated ambiguous region masks (e.g. GT03-R02), and unsupported guess tracking; unambiguous frozen OCR prompt; empirical PDF/DOCX feasibility test suite with MS Word and LibreOffice; diagram crop policy; provisional architecture; and gate-aligned 7-day schedule separating research utilities from production code.",
+  "updatedAt": "2026-11-03T13:25:25.402422352Z",
+  "requestFeedback": true,
+  "userFacing": true
+}

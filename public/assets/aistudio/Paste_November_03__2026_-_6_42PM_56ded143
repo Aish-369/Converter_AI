@@ -1,0 +1,796 @@
+# LipiScript
+## Phase 0 — OCR Feasibility, Indic Handwriting Benchmark & Provisional System Architecture
+
+**Document status:** Revised for review  
+**Research verification date:** 3 November 2026  
+**Approval status:** Proceed gate NOT APPROVED  
+**Current phase:** Planning and feasibility review only  
+**Live OCR experiments:** Not started  
+**Application development:** Not authorized
+
+---
+
+## 1. Executive Summary
+
+LipiScript is a SaaS platform that converts handwritten notes into editable digital text and professionally formatted e-books.
+
+The primary feasibility question is whether available OCR and vision-language models can reliably recognize handwritten Marathi, Hindi, English, and mixed-language content while preserving the original meaning and script.
+
+The system must:
+
+- Convert handwritten notes into editable digital text.
+- Support Marathi, Hindi, English, and mixed-language pages with equal importance.
+- Preserve the original language and wording.
+- Never automatically correct spelling, grammar, punctuation, or rewrite content.
+- Mark uncertain or unreadable words as `[illegible]` rather than guessing.
+- Allow users to manually edit the transcribed content.
+- Generate a clean, professional PDF with headings, paragraphs, bullets, a simple cover, chapter-wise table of contents, and automatic page numbers.
+- Keep every user's notes private to that individual account.
+
+**No OCR provider or production architecture is selected in this phase.** The final selection must be based on measured benchmark results, operational requirements, privacy terms, and cost.
+
+### Product guardrails
+
+| Area | Confirmed requirement |
+|---|---|
+| Languages | Marathi, Hindi, English, mixed-language |
+| Uploads | Images, PDFs, camera capture |
+| Output | Editable digital text and professional PDF |
+| Editing | Manual editing by the user |
+| AI correction | Not permitted automatically |
+| Unreadable content | Mark as `[illegible]` |
+| Privacy | Each user can access only their own notes |
+| Sharing | No shared workspaces or team access |
+| Formatting | Essential professional formatting only |
+| Diagrams | User chooses handling per project |
+| Pricing | To be decided later |
+
+---
+
+## 2. Technical Research and Feasibility Audit
+
+All claims in this section use the following labels:
+
+- **Verified:** Supported by an official technical source.
+- **Unverified:** Not established by available official documentation.
+- **Assumption:** A proposed approach requiring validation.
+- **Measured:** Evidence obtained from LipiScript's own benchmark. No such measurements exist yet.
+
+### 2.1 Indic handwriting recognition
+
+**Verified:** Google Cloud Vision documents handwriting support for several scripts. Devanagari is listed as Experimental, while Latin is listed as Supported.
+
+**Important limitation:** Experimental script support does not establish reliable recognition of handwritten Marathi or Hindi in LipiScript's actual handwriting samples.
+
+Official documentation:
+- https://cloud.google.com/vision/docs/languages
+
+**Unverified:** No provider should be considered reliable for Marathi and Hindi handwriting until it has been tested against the same ground-truth pages.
+
+### 2.2 Devanagari PDF rendering
+
+**Verified:** Devanagari text requires appropriate Unicode handling, fonts, and shaping support.
+
+**Assumption:** Chromium-based PDF generation with a suitable shaping engine, such as HarfBuzz, may be a viable approach.
+
+It is not a guarantee of correct rendering.
+
+The feasibility test must verify:
+
+1. Devanagari conjuncts and ligatures.
+2. Matras and their visual placement.
+3. Reph and other script-specific shaping.
+4. Line wrapping and paragraph layout.
+5. Correct font availability and embedding.
+6. Selectable and searchable PDF text.
+7. Unicode copy-and-paste into another editor.
+8. Extracted text matching the intended Unicode sequence.
+
+The PDF must be inspected visually and programmatically. A PDF that merely looks correct is not sufficient if its text cannot be selected, searched, copied, or extracted correctly.
+
+### 2.3 DOCX feasibility
+
+Unicode text storage alone does not guarantee correct document rendering.
+
+The feasibility test must generate sample DOCX files and open them in both:
+
+- Microsoft Word
+- LibreOffice Writer
+
+Check:
+
+- Marathi and Hindi font rendering.
+- Conjuncts, ligatures, and matras.
+- Font fallback.
+- Paragraph and heading formatting.
+- Page breaks and page numbering.
+- Text selection and copy-paste.
+- Reopening and saving without text corruption.
+
+DOCX support remains a feasibility item until these tests pass.
+
+---
+
+## 3. OCR Candidate Evaluation
+
+**No candidate is selected as the primary production engine.**
+
+Every provider must be evaluated using the same sample pages, the same transcription instructions, and the same scoring methodology.
+
+### 3.1 Candidate A — Google Gemini API
+
+Potential candidates:
+
+| Model | Exact API model ID | Documented image input |
+|---|---|---|
+| Gemini 3.8 Flash | `gemini-3.8-flash` | Yes |
+| Gemini 4 Argon | `gemini-4-argon` | Yes |
+
+**Verified:** Both model IDs and image-input capability are documented in Google's official model documentation.
+
+Official links:
+
+- Gemini 3.8 Flash: https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash
+- Gemini 4 Argon: https://ai.google.dev/gemini-api/docs/models/gemini-4-argon
+- Model availability and versions: https://ai.google.dev/gemini-api/docs/models
+- Pricing: https://ai.google.dev/gemini-api/docs/pricing
+- Terms: https://ai.google.dev/gemini-api/terms
+- Data use: https://ai.google.dev/gemini-api/docs/usage-policies
+
+**Pricing verification:** The official pricing page publishes model-specific token prices and service tiers. Gemini 4 Argon is listed with paid-tier pricing; its free tier is unavailable. Pricing must be recalculated using actual image and output-token consumption during the benchmark.
+
+**Privacy verification:** Google's pricing documentation distinguishes free and paid tiers. It states that free-tier content may be used to improve products, whereas paid-tier content is not used for that purpose. The exact service terms, data retention, and applicable account configuration must be reviewed before production use.
+
+**Unverified:** Official model availability and image input do not prove handwritten Marathi or Hindi accuracy. Both models remain benchmark candidates.
+
+### 3.2 Candidate B — OpenAI API
+
+GPT-4o-mini must not be treated as a current production candidate. It may be retained only as a legacy baseline if the endpoint remains technically accessible during testing.
+
+Potential currently documented vision-capable candidates include:
+
+| Model | Exact API model ID | Status for this evaluation |
+|---|---|---|
+| GPT-6 Astra | `gpt-6-astra` | Candidate |
+| GPT-6.1 Sol | `gpt-6.1-sol` | Candidate |
+| GPT-6 Luna | `gpt-6-luna` | Candidate |
+| GPT-4o-mini | `gpt-4o-mini` | Legacy baseline only, if accessible |
+
+**Verified:** OpenAI's current model catalogue states that its latest models support image input and vision. Exact model IDs are listed in the official model catalogue.
+
+Official links:
+
+- Model catalogue: https://developers.openai.com/api/docs/models
+- All models: https://developers.openai.com/api/docs/models/all
+- Image and vision guide: https://developers.openai.com/api/docs/guides/images-vision
+- API pricing: https://platform.openai.com/pricing
+- API data controls: https://developers.openai.com/api/docs/guides/your-data
+- Business data privacy: https://openai.com/business-data/
+
+**Pricing verification:** Model-specific input and output rates are published on the official pricing page. Actual image-token usage and generated-text usage must be measured for each test page.
+
+**Privacy verification:** OpenAI states that API inputs and outputs are not used to train or improve models by default unless the customer opts in. The data-controls documentation also describes abuse-monitoring retention and application-state retention. The selected endpoint and configuration must be checked before production use.
+
+**Unverified:** The model catalogue's vision capability does not establish Marathi or Hindi handwriting accuracy. Each model remains a candidate.
+
+**Legacy note:** GPT-4o-mini must not be selected as the recommended production model merely because it appeared in the earlier proposal. Its current deprecation and endpoint availability must be checked against the official deprecation documentation before any legacy test.
+
+### 3.3 Candidate C — Google Cloud Vision
+
+Potential service:
+
+- Product: Google Cloud Vision API
+- Feature: Document text detection / handwriting recognition
+
+Official links:
+
+- Handwriting language support: https://cloud.google.com/vision/docs/languages
+- Text detection documentation: https://cloud.google.com/vision/docs/ocr
+- Pricing: https://cloud.google.com/vision/pricing
+- Data processing terms: https://cloud.google.com/terms/data-processing-addendum
+- Service terms: https://cloud.google.com/terms
+
+**Verified:**
+
+- Cloud Vision provides OCR capabilities.
+- Devanagari handwriting support is listed as Experimental.
+- Latin handwriting support is listed as Supported.
+
+**Pricing:** Cloud Vision pricing is based on the applicable feature and usage volume. The exact current OCR rate and free usage allowance must be recorded from the official pricing page before experiments.
+
+**Privacy:** Google Cloud's data-processing terms describe customer-data processing, security, deletion, and subprocessors. The applicable Cloud Vision service terms and configuration must be reviewed before production use.
+
+**Unverified:** Experimental Devanagari support does not establish acceptable Marathi or Hindi handwritten-note accuracy.
+
+### 3.4 Candidate D — PaddleOCR-VL
+
+Proposed open-source candidate:
+
+- Repository: https://github.com/PaddlePaddle/PaddleOCR
+- Model family: PaddleOCR-VL
+- Specific version to evaluate: PaddleOCR-VL-1.6
+- Model identifier used by the repository: `PaddleOCR-VL-1.6`
+
+Official links:
+
+- Repository: https://github.com/PaddlePaddle/PaddleOCR
+- PaddleOCR-VL documentation: https://github.com/PaddlePaddle/PaddleOCR/blob/main/docs/version3.x/pipeline_usage/PaddleOCR-VL.en.md
+- Releases: https://github.com/PaddlePaddle/PaddleOCR/releases
+- Model resources: https://huggingface.co/PaddlePaddle
+
+**Verified:**
+
+- The official repository documents PaddleOCR-VL as a document-parsing vision-language model.
+- The repository describes support for multiple languages, including Hindi in its published language coverage.
+- The repository is released under the Apache License 2.0.
+- PaddleOCR-VL has versioned releases, including the 1.6 model family.
+
+**Unverified:**
+
+- Reliable handwritten Hindi recognition has not been established for LipiScript's handwriting conditions.
+- Explicit Marathi handwriting support has not been established from the reviewed official evidence.
+- The exact downloadable weight revision, checksum, and model-specific licensing details must be recorded before the local evaluation.
+- The general language count must not be interpreted as proof of handwriting support for every language.
+
+**Pricing and commercial terms:**
+
+- The software repository uses Apache License 2.0.
+- Self-hosting is not automatically free. Infrastructure, GPU/CPU usage, storage, maintenance, and operational costs must be estimated.
+- Confirm that the selected model weights and any dependencies carry compatible licensing terms.
+- No commercial OCR API price should be assumed for the locally hosted model.
+
+**Required before benchmark:**
+
+1. Record the exact Git commit or release tag.
+2. Record the exact model-weight repository and revision.
+3. Record the model and dependency licenses.
+4. Record the required hardware and estimated inference cost.
+5. Verify whether the selected model can run on the available test hardware.
+6. Mark Marathi handwriting support as unverified unless direct evidence is found.
+
+### 3.5 Candidate comparison summary
+
+| Candidate | Image input / OCR | Indic handwriting evidence | Commercial evaluation |
+|---|---|---|---|
+| Gemini 3.8 Flash | Verified | Unverified for our samples | Official API pricing and terms |
+| Gemini 4 Argon | Verified | Unverified for our samples | Official API pricing and terms |
+| OpenAI vision models | Verified | Unverified for our samples | Official API pricing and terms |
+| Google Cloud Vision | Verified | Devanagari experimental | Usage-based Cloud pricing |
+| PaddleOCR-VL-1.6 | Verified document-parsing model | Hindi listed; handwritten Hindi and Marathi unverified | Apache 2.0 repository; hosting costs apply |
+
+**Decision:** All listed candidates remain unselected. Benchmark measurements will determine which candidates deserve further evaluation.
+
+---
+
+## 4. Benchmark Dataset and Ground-Truth Methodology
+
+### 4.1 Dataset size
+
+The planned dataset contains 30 handwritten pages:
+
+- 10 pages with manually prepared ground-truth transcripts.
+- 20 additional pages for qualitative evaluation.
+
+The user will manually transcribe 10 pages, not all 30.
+
+The 10 manually transcribed pages form the quantitative scoring set. The other 20 pages are used to inspect recognition behavior, language preservation, layout handling, and recurring errors. They must not be included in quantitative accuracy claims unless ground-truth transcripts are prepared for them later.
+
+### 4.2 Proposed distribution of the 10 scored pages
+
+| Language group | Easy | Moderate | Difficult | Total |
+|---|---:|---:|---:|---:|
+| Marathi | 1 | 1 | 1 | 3 |
+| Hindi | 1 | 1 | 1 | 3 |
+| English | 1 | 1 | 0 | 2 |
+| Mixed-language | 0 | 1 | 1 | 2 |
+| **Total** | **3** | **4** | **3** | **10** |
+
+Difficulty classification:
+
+- **Easy:** Clear handwriting, good image quality, simple text layout.
+- **Moderate:** Natural handwriting variation, some connected letters, moderate image imperfections, or mixed content.
+- **Difficult:** Dense writing, unclear letter forms, overlapping marks, difficult conjuncts, or complex mixed-language content.
+
+The final sample allocation should be confirmed after inspecting the available pages. If a language/difficulty combination is unavailable, the actual distribution must be recorded rather than pretending the planned distribution was achieved.
+
+### 4.3 Limitations of the 10-page scored set
+
+Ten scored pages provide exploratory evidence only.
+
+They cannot establish statistically conclusive language-wise accuracy because:
+
+- The number of pages per language is small.
+- Handwriting styles may not represent the wider user population.
+- Difficulty levels and writing conditions may vary.
+- A few difficult pages can heavily influence the score.
+
+Results must therefore be reported as preliminary benchmark observations, not as guaranteed production accuracy or a statistically representative accuracy claim.
+
+### 4.4 The remaining 20 pages
+
+Use the remaining 20 pages for qualitative evaluation of:
+
+- Recognition behavior on handwriting not included in the scored set.
+- Marathi/Hindi mixed with English.
+- Difficult conjuncts and matras.
+- Headings, bullets, paragraphs, and tables.
+- Formula and diagram handling.
+- Unreadable-word behavior.
+- Language drift and invented words.
+- Layout preservation.
+
+Do not calculate or advertise quantitative CER/WER for these pages without manually verified ground truth.
+
+### 4.5 Ground-truth rules
+
+The user's manual transcript is the reference text.
+
+Ground-truth rules:
+
+1. Transcribe the visible original wording.
+2. Do not correct spelling or grammar.
+3. Preserve the language used by the writer.
+4. Preserve meaningful punctuation.
+5. Mark genuinely unreadable spans as `[illegible]`.
+6. Do not guess words from context.
+7. Record uncertain spans separately for review.
+8. Preserve paragraph and heading boundaries where practical.
+
+The same ground-truth version must be used for every candidate.
+
+---
+
+## 5. Evaluation Metrics and Text Normalization
+
+The benchmark must not confuse conventional character error rate with a custom Indic grapheme-level metric.
+
+### 5.1 Unicode normalization
+
+Before scoring:
+
+- Normalize reference and prediction to Unicode NFC.
+- Use the same normalization implementation and Unicode version for every candidate.
+- Do not transliterate Marathi or Hindi.
+- Do not convert Devanagari into Latin characters.
+- Do not silently replace visually similar characters from different Unicode scripts.
+- Preserve the original script and meaningful punctuation.
+
+NFC normalization makes canonically equivalent Unicode sequences comparable. It does not correct spelling, alter words, or make incorrect OCR output correct.
+
+### 5.2 Conventional Character Error Rate — CER
+
+Conventional CER is calculated using Unicode code points:
+
+`CER = (S + D + I) / N`
+
+Where:
+
+- `S` = substitutions.
+- `D` = deletions.
+- `I` = insertions.
+- `N` = number of reference code points.
+
+Use edit distance after NFC normalization.
+
+For this benchmark:
+
+- Include punctuation.
+- Include whitespace.
+- Report the exact scoring implementation.
+- Do not label this metric as grapheme-cluster CER.
+
+### 5.3 Grapheme-cluster CER
+
+Indic scripts can contain multiple Unicode code points that visually form a single user-perceived character.
+
+A separate grapheme-cluster metric will therefore be reported.
+
+Procedure:
+
+1. Normalize both texts to NFC.
+2. Segment the text into Unicode extended grapheme clusters using Unicode Standard Annex #29.
+3. Calculate Levenshtein edit distance over those clusters.
+4. Divide by the number of reference grapheme clusters.
+
+This is a custom grapheme-level evaluation metric and must be labelled **Grapheme CER**, not conventional code-point CER.
+
+Official Unicode reference:
+https://unicode.org/reports/tr29/
+
+### 5.4 Word Error Rate — WER
+
+`WER = (S + D + I) / N`
+
+For WER:
+
+- Normalize both texts to NFC.
+- Convert consecutive whitespace sequences into a single separator.
+- Split text into whitespace-delimited tokens.
+- Preserve punctuation attached to tokens.
+- Do not remove punctuation before scoring.
+- Use the same tokenization procedure for every model.
+
+This makes the scoring reproducible and prevents different providers from receiving different scoring treatment.
+
+### 5.5 Punctuation evaluation
+
+Because punctuation must not be automatically corrected, punctuation errors must be visible in the report.
+
+Report:
+
+- Missing punctuation.
+- Extra punctuation.
+- Incorrect punctuation substitutions.
+- Punctuation attached to the wrong token, where identifiable.
+
+Punctuation remains part of the main text scoring. A separate punctuation error breakdown is an additional diagnostic.
+
+### 5.6 `[illegible]` scoring policy
+
+- If the ground truth marks a span as `[illegible]`, do not treat the unknown original word as known text.
+- Exclude that span from readable-text CER/WER scoring through a documented reference mask.
+- Report the number and proportion of masked reference spans separately.
+- If a model marks a readable ground-truth word as `[illegible]`, count that as a recognition failure.
+- If a model invents a word where the reference is unreadable, record it as an unsupported guess.
+
+The masking process must be documented and applied identically to all candidates.
+
+### 5.7 Additional evaluation measures
+
+| Measure | Purpose |
+|---|---|
+| CER | Character-level recognition errors |
+| Grapheme CER | Indic grapheme-level recognition errors |
+| WER | Word-level recognition errors |
+| Language fidelity | Detects unintended language changes |
+| Hallucination count | Counts words not supported by the source |
+| `[illegible]` behavior | Checks whether uncertainty is handled honestly |
+| Processing time | Measures time per page |
+| Cost per page | Measures provider and infrastructure cost |
+| Formatting preservation | Checks paragraphs, headings, bullets, and tables |
+
+---
+
+## 6. Frozen OCR Instructions
+
+All candidates must receive equivalent instructions.
+
+The benchmark prompt must be frozen before scored testing.
+
+### Required recognition behavior
+
+- Read only the content visible in the supplied page.
+- Preserve the original words and language.
+- Support Marathi, Hindi, English, and mixed-language writing.
+- Do not translate.
+- Do not summarize.
+- Do not rewrite.
+- Do not correct spelling.
+- Do not correct grammar.
+- Do not add punctuation.
+- Do not infer missing content.
+- Do not replace unclear words with contextually likely words.
+- Mark unreadable words as `[illegible]`.
+- Preserve paragraph and heading structure where visible.
+- Preserve table structure where reasonably identifiable.
+- Represent formulas without inventing missing symbols.
+- Identify diagram labels separately from diagram interpretation.
+
+### Prohibited behavior
+
+The OCR engine must not:
+
+- Improve the writer's language.
+- Correct grammatical errors.
+- Complete unfinished sentences.
+- Add explanations.
+- Add facts that are not visible.
+- Convert Marathi or Hindi into English.
+- Guess an unclear word based on surrounding context.
+
+The output must represent transcription, not editing or content generation.
+
+---
+
+## 7. Diagram Handling
+
+Diagram handling is a per-project user choice.
+
+The user must be able to choose one of these approaches for a project:
+
+1. **Recreate diagram:** Reconstruct a digital diagram from the original where feasible.
+2. **Retain original diagram crop:** Retain only the selected original diagram region as an image.
+3. **Extract labels/text:** Extract diagram labels and related visible text without retaining the diagram image.
+
+Rules:
+
+- Never embed the entire original handwritten page as the final document body.
+- The final document must otherwise contain digital, editable text.
+- If the user chooses the original diagram option, retain only the selected diagram crop.
+- If diagram reconstruction is unreliable, do not silently invent missing connections, labels, or shapes.
+- Preserve the user's selected diagram policy for that project.
+
+Diagram reconstruction quality is a separate evaluation item, not part of ordinary text OCR accuracy.
+
+---
+
+## 8. PDF and DOCX Feasibility Tests
+
+### 8.1 PDF test
+
+Potential approach: Chromium-based PDF rendering with appropriate Unicode fonts and shaping support.
+
+This is a candidate pipeline, not a confirmed solution.
+
+Required test cases:
+
+- Marathi paragraphs.
+- Hindi paragraphs.
+- English paragraphs.
+- Mixed-language paragraphs.
+- Conjuncts and ligatures.
+- Matras and reph.
+- Bullets and numbered lists.
+- Headings and chapter titles.
+- Table of contents.
+- Page numbering.
+- Font embedding.
+- Text selection.
+- Search inside the PDF.
+- Copy-paste into another editor.
+- Extracted Unicode text comparison.
+
+**Acceptance:** The generated PDF must be visually correct and preserve usable digital text. Any failure must be documented.
+
+### 8.2 DOCX test
+
+Generate sample DOCX files and test in:
+
+- Microsoft Word.
+- LibreOffice Writer.
+
+Check the same script-shaping, formatting, font, and text-extraction requirements as the PDF test.
+
+DOCX feasibility is not confirmed until both applications have been tested.
+
+### 8.3 Formatting scope
+
+Keep document formatting intentionally simple:
+
+- Readable fonts and font sizes.
+- Clear headings.
+- Paragraphs and bullets.
+- Automatic page numbers.
+- Chapter-wise table of contents.
+- One simple professional cover.
+
+Do not introduce a complex page-design editor or unnecessary visual customization.
+
+---
+
+## 9. Provisional System Architecture
+
+**Architecture status: PROVISIONAL — NOT APPROVED.**
+
+No provider, backend framework, database, cloud-storage service, or hosting platform is locked in this phase.
+
+The architecture must be evaluated after the OCR benchmark and technical feasibility tests.
+
+### 9.1 Earlier backend terminology clarification
+
+The earlier phrase **"Node.js Express + TSX"** was ambiguous.
+
+It may have been intended to mean:
+
+- Node.js as the runtime.
+- Express as the backend HTTP framework.
+- TypeScript as the programming language.
+- `.tsx` files only where JSX syntax is required, typically for React components.
+
+TSX is not itself a backend framework.
+
+This interpretation is not an approved technology decision. The final backend stack must be selected after comparing implementation complexity, deployment needs, maintainability, security, and operating cost.
+
+### 9.2 Architecture areas to evaluate
+
+| Area | Evaluation requirement |
+|---|---|
+| Frontend | Simple, responsive blue-and-white interface |
+| Authentication | Secure individual user accounts |
+| Backend | Evaluate suitable server-side framework |
+| OCR processing | Provider-neutral integration approach |
+| Background processing | Suitable for longer document jobs |
+| Database | Secure storage of user and project metadata |
+| File storage | Private original uploads and generated documents |
+| Document editor | Editable transcription and chapters |
+| PDF generation | Verified Devanagari shaping and searchable text |
+| DOCX generation | Verified Word and LibreOffice compatibility |
+| Security | Per-user access isolation |
+| Backups | Database and file recovery strategy |
+| Monitoring | Processing failures, latency, and cost visibility |
+
+### 9.3 Privacy and data isolation
+
+The following are mandatory product requirements:
+
+- A user can access only their own projects and notes.
+- A user cannot access another user's uploaded documents or generated output.
+- No shared workspaces.
+- No institutional access to an individual's private notes.
+- No unnecessary administrator access to note contents.
+- Storage must be private by default.
+- File access must be authorized server-side.
+- Temporary processing files must follow a defined deletion policy.
+- Account and project deletion must be considered in the data lifecycle.
+- Backups must be protected and have a documented retention policy.
+
+These requirements must be reflected in the architecture and security tests.
+
+---
+
+## 10. Seven-Day Phase 0 Execution Plan
+
+The seven-day schedule begins only after the required samples, credentials, and approval are available.
+
+| Day | Activity | Dependency |
+|---|---|---|
+| Day 1 | Inspect and classify the 30 sample pages; confirm the 10-page scored set | User supplies all 30 pages |
+| Day 2 | Prepare the 10 ground-truth transcripts and freeze scoring rules | User completes manual transcription |
+| Day 3 | Verify provider access, model IDs, terms, pricing, and test credentials | API credentials and account access |
+| Day 4 | Run controlled OCR tests on the 10 scored pages | Samples, transcripts, credentials, explicit approval |
+| Day 5 | Evaluate the 20 qualitative pages and review difficult cases | Samples and successful provider access |
+| Day 6 | Run PDF/DOCX feasibility checks and calculate preliminary costs | Transcription outputs and rendering test setup |
+| Day 7 | Prepare results, limitations, candidate comparison, and recommendations | All relevant tests completed |
+
+### Dependencies and possible delays
+
+The seven-day schedule is a target, not a guarantee.
+
+Work may take longer if:
+
+- The handwriting samples are not received.
+- The ground-truth transcripts are incomplete.
+- Provider API credentials are unavailable.
+- A provider has regional or account-access restrictions.
+- Model rate limits prevent consistent testing.
+- Local model hardware is insufficient.
+- PDF/DOCX rendering issues require additional investigation.
+
+No experiments should be reported as completed before they have actually been run.
+
+---
+
+## 11. Benchmark Reporting Template
+
+The final report must include the following for every candidate:
+
+| Field | Result |
+|---|---|
+| Provider | |
+| Exact model/service ID | |
+| Model version or release | |
+| Test date | |
+| API availability | |
+| Language support evidence | |
+| Marathi scored results | |
+| Hindi scored results | |
+| English scored results | |
+| Mixed-language scored results | |
+| Code-point CER | |
+| Grapheme CER | |
+| WER | |
+| Hallucination observations | |
+| `[illegible]` behavior | |
+| Average processing time | |
+| Estimated cost per page | |
+| Privacy and retention review | |
+| Technical limitations | |
+
+### Required conclusions
+
+The report must distinguish:
+
+- **Measured:** Directly obtained from benchmark runs.
+- **Verified:** Supported by official provider documentation.
+- **Unverified:** Not supported by sufficient evidence.
+- **Assumption:** A proposed approach not yet tested.
+
+The final recommendation must explain:
+
+1. Which candidates performed best on the available samples.
+2. Which languages remain weak.
+3. Which candidate is most practical for further testing.
+4. The estimated cost per page.
+5. The privacy and retention implications.
+6. The PDF/DOCX feasibility results.
+7. What additional testing is needed before production.
+
+A winning benchmark candidate is not automatically approved for production. Production selection requires a separate review and approval.
+
+---
+
+## 12. Official Research References
+
+The following official sources were checked on **3 November 2026**. Model availability, pricing, and terms can change and must be rechecked before implementation.
+
+### Google
+
+- Gemini model catalogue: https://ai.google.dev/gemini-api/docs/models
+- Gemini 3.8 Flash: https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash
+- Gemini 4 Argon: https://ai.google.dev/gemini-api/docs/models/gemini-4-argon
+- Gemini pricing: https://ai.google.dev/gemini-api/docs/pricing
+- Gemini terms: https://ai.google.dev/gemini-api/terms
+- Cloud Vision language support: https://cloud.google.com/vision/docs/languages
+- Cloud Vision OCR: https://cloud.google.com/vision/docs/ocr
+- Cloud Vision pricing: https://cloud.google.com/vision/pricing
+- Google Cloud data processing addendum: https://cloud.google.com/terms/data-processing-addendum
+
+### OpenAI
+
+- Model catalogue: https://developers.openai.com/api/docs/models
+- All models: https://developers.openai.com/api/docs/models/all
+- Image and vision guide: https://developers.openai.com/api/docs/guides/images-vision
+- API pricing: https://platform.openai.com/pricing
+- API data controls: https://developers.openai.com/api/docs/guides/your-data
+- Business data privacy: https://openai.com/business-data/
+- Model deprecations: https://developers.openai.com/api/docs/deprecations
+
+### PaddleOCR
+
+- Official repository: https://github.com/PaddlePaddle/PaddleOCR
+- PaddleOCR-VL documentation: https://github.com/PaddlePaddle/PaddleOCR/blob/main/docs/version3.x/pipeline_usage/PaddleOCR-VL.en.md
+- Releases: https://github.com/PaddlePaddle/PaddleOCR/releases
+- Official model resources: https://huggingface.co/PaddlePaddle
+
+### Unicode
+
+- Unicode Standard Annex #29 — Text Segmentation: https://unicode.org/reports/tr29/
+- Unicode Normalization: https://unicode.org/reports/tr15/
+
+---
+
+## 13. Approval Gates
+
+### Gate 1 — Phase 0 document approval
+
+The user reviews this revised document.
+
+**Current status: NOT APPROVED.**
+
+### Gate 2 — Benchmark preparation
+
+Requires:
+
+- 30 sample pages.
+- Confirmed 10-page scored allocation.
+- 10 manually prepared ground-truth transcripts.
+- Verified candidate access and credentials.
+- Frozen prompts and scoring rules.
+
+### Gate 3 — Live OCR benchmark approval
+
+Live OCR experiments may begin only after the user explicitly approves them.
+
+No live OCR experiments are authorized by this document.
+
+### Gate 4 — Benchmark results review
+
+Present measured results, limitations, costs, and privacy findings.
+
+Do not select a production provider before this review.
+
+### Gate 5 — Architecture approval
+
+Present the architecture based on actual benchmark evidence and feasibility results.
+
+No application code should be written before the user approves the next phase.
+
+---
+
+## Final Phase 0 Decision
+
+**The revised Phase 0 document is ready for user review, not implementation.**
+
+No primary OCR provider has been selected. The system architecture remains provisional. No live OCR experiment has been started. No application code has been written.
+
+The next action is to obtain the user's review and approval of this revised Phase 0 document. Only then may benchmark preparation proceed. Live experiments still require their own explicit approval.
