@@ -1,0 +1,264 @@
+{
+  "benchmarkVersion": "1.0.0",
+  "totalTargetPages": 30,
+  "scoredGoldPagesCount": 10,
+  "qualitativePagesCount": 20,
+  "languageDistribution": {
+    "marathi": 8,
+    "hindi": 8,
+    "english": 7,
+    "mixed": 7
+  },
+  "pages": [
+    {
+      "id": "GT-01",
+      "type": "gold",
+      "language": "Marathi",
+      "difficulty": "Easy",
+      "characteristics": "Clear handwriting, formal script, shirorekha intact",
+      "imageFile": null,
+      "transcriptFile": "GT-01_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "GT-02",
+      "type": "gold",
+      "language": "Marathi",
+      "difficulty": "Moderate",
+      "characteristics": "Rapid lecture notes, compound consonants (jodakshare)",
+      "imageFile": null,
+      "transcriptFile": "GT-02_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "GT-03",
+      "type": "gold",
+      "language": "Marathi",
+      "difficulty": "Difficult",
+      "characteristics": "Cursive slant, broken lines, ink fading",
+      "imageFile": null,
+      "transcriptFile": "GT-03_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "GT-04",
+      "type": "gold",
+      "language": "Hindi",
+      "difficulty": "Easy",
+      "characteristics": "Clear handwriting, formal Hindi study notes",
+      "imageFile": null,
+      "transcriptFile": "GT-04_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "GT-05",
+      "type": "gold",
+      "language": "Hindi",
+      "difficulty": "Moderate",
+      "characteristics": "Everyday casual notes, abbreviations, irregular spacing",
+      "imageFile": null,
+      "transcriptFile": "GT-05_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "GT-06",
+      "type": "gold",
+      "language": "Hindi",
+      "difficulty": "Difficult",
+      "characteristics": "Broken shirorekha, quick cursive, doctor-style handwriting",
+      "imageFile": null,
+      "transcriptFile": "GT-06_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "GT-07",
+      "type": "gold",
+      "language": "English",
+      "difficulty": "Easy",
+      "characteristics": "Neat textbook summary notes, clear printing",
+      "imageFile": null,
+      "transcriptFile": "GT-07_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "GT-08",
+      "type": "gold",
+      "language": "English",
+      "difficulty": "Moderate",
+      "characteristics": "Technical derivations, mathematical formulas, symbols",
+      "imageFile": null,
+      "transcriptFile": "GT-08_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "GT-09",
+      "type": "gold",
+      "language": "Mixed-Language",
+      "difficulty": "Moderate",
+      "characteristics": "Hinglish / Maranglish mixed notes, code-switching",
+      "imageFile": null,
+      "transcriptFile": "GT-09_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "GT-10",
+      "type": "gold",
+      "language": "Mixed-Language",
+      "difficulty": "Difficult",
+      "characteristics": "Mixed script with hand-drawn tables and annotated diagrams",
+      "imageFile": null,
+      "transcriptFile": "GT-10_transcript.txt",
+      "transcriptStatus": "pending",
+      "ambiguousRegions": []
+    },
+    {
+      "id": "Q-01",
+      "type": "qualitative",
+      "language": "Marathi",
+      "focus": "Mathematical and physical equations in Marathi",
+      "imageFile": null
+    },
+    {
+      "id": "Q-02",
+      "type": "qualitative",
+      "language": "Marathi",
+      "focus": "Handwritten tables and multi-column bullet lists",
+      "imageFile": null
+    },
+    {
+      "id": "Q-03",
+      "type": "qualitative",
+      "language": "Marathi",
+      "focus": "Biology diagram with Marathi text labels",
+      "imageFile": null
+    },
+    {
+      "id": "Q-04",
+      "type": "qualitative",
+      "language": "Marathi",
+      "focus": "Dense handwritten history notes with dates and numerals",
+      "imageFile": null
+    },
+    {
+      "id": "Q-05",
+      "type": "qualitative",
+      "language": "Marathi",
+      "focus": "Heavily skewed photo with shadow / crumpled paper",
+      "imageFile": null
+    },
+    {
+      "id": "Q-06",
+      "type": "qualitative",
+      "language": "Hindi",
+      "focus": "Chemistry equations and molecular formulas in Hindi",
+      "imageFile": null
+    },
+    {
+      "id": "Q-07",
+      "type": "qualitative",
+      "language": "Hindi",
+      "focus": "Handwritten tables with Hindi numbers and headings",
+      "imageFile": null
+    },
+    {
+      "id": "Q-08",
+      "type": "qualitative",
+      "language": "Hindi",
+      "focus": "Physics circuit diagram with Hindi labels and units",
+      "imageFile": null
+    },
+    {
+      "id": "Q-09",
+      "type": "qualitative",
+      "language": "Hindi",
+      "focus": "Dense essay notes with varying ballpoint and gel inks",
+      "imageFile": null
+    },
+    {
+      "id": "Q-10",
+      "type": "qualitative",
+      "language": "Hindi",
+      "focus": "Low-light camera capture with uneven illumination",
+      "imageFile": null
+    },
+    {
+      "id": "Q-11",
+      "type": "qualitative",
+      "language": "English",
+      "focus": "Complex calculus integration and matrices",
+      "imageFile": null
+    },
+    {
+      "id": "Q-12",
+      "type": "qualitative",
+      "language": "English",
+      "focus": "Multi-column comparison table",
+      "imageFile": null
+    },
+    {
+      "id": "Q-13",
+      "type": "qualitative",
+      "language": "English",
+      "focus": "Engineering block diagram and flowcharts",
+      "imageFile": null
+    },
+    {
+      "id": "Q-14",
+      "type": "qualitative",
+      "language": "English",
+      "focus": "Rapid scratchpad meeting notes with abbreviations",
+      "imageFile": null
+    },
+    {
+      "id": "Q-15",
+      "type": "qualitative",
+      "language": "English",
+      "focus": "Faint pencil writing on lined paper",
+      "imageFile": null
+    },
+    {
+      "id": "Q-16",
+      "type": "qualitative",
+      "language": "Mixed-Language",
+      "focus": "Computer science notes: English code + Marathi comments",
+      "imageFile": null
+    },
+    {
+      "id": "Q-17",
+      "type": "qualitative",
+      "language": "Mixed-Language",
+      "focus": "Commerce ledger table with Marathi & English column headers",
+      "imageFile": null
+    },
+    {
+      "id": "Q-18",
+      "type": "qualitative",
+      "language": "Mixed-Language",
+      "focus": "Biomedical notes: English medical terms in Devanagari phonetics",
+      "imageFile": null
+    },
+    {
+      "id": "Q-19",
+      "type": "qualitative",
+      "language": "Mixed-Language",
+      "focus": "Hinglish study guide with bullet points and underlined terms",
+      "imageFile": null
+    },
+    {
+      "id": "Q-20",
+      "type": "qualitative",
+      "language": "Mixed-Language",
+      "focus": "Mixed script with strikethroughs, corrections, and margin notes",
+      "imageFile": null
+    }
+  ]
+}

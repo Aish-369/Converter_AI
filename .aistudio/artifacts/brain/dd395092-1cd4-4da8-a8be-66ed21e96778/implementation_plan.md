@@ -13,9 +13,9 @@
 
 | Gate | Milestone | Status |
 |---|---|---|
-| **Gate 1** | **Phase 0 document review** | **Pending user approval** |
-| Gate 2 | Sample and benchmark preparation | Locked |
-| Gate 3 | OCR benchmark execution | Locked |
+| **Gate 1** | **Phase 0 document review** | **APPROVED ✅ (Nov 3, 2026)** |
+| **Gate 2** | **Sample and benchmark preparation** | **IN PROGRESS (Day 1 utilities ready; awaiting samples & transcripts)** |
+| Gate 3 | OCR benchmark execution | Locked (Requires Gate 2 completion & explicit user authorization) |
 | Gate 4 | Feasibility report and candidate decision | Locked |
 | Gate 5 | Product blueprint and database design | Locked |
 | Gate 6 | Milestone-by-milestone development | Locked |
