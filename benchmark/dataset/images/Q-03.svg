@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1100" viewBox="0 0 800 1100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;family=Kalam:wght@300;400;700&amp;display=swap');
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e3a8a"/>
+    </marker>
+    <filter id="paper-texture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+      <feDiffuseLighting in="noise" lighting-color="#fffdfa" surfaceScale="1" result="light">
+        <feDistantLight azimuth="45" elevation="60" />
+      </feDiffuseLighting>
+      <feBlend mode="multiply" in="SourceGraphic" in2="light" />
+    </filter>
+  </defs>
+
+  <!-- Notebook Page Paper -->
+  <rect width="100%" height="100%" fill="#faf8f5" filter="url(#paper-texture)" />
+
+  <!-- Ruled & Margin Lines -->
+  <line x1="20" y1="140" x2="780" y2="140" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="174" x2="780" y2="174" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="208" x2="780" y2="208" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="242" x2="780" y2="242" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="276" x2="780" y2="276" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="310" x2="780" y2="310" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="344" x2="780" y2="344" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="378" x2="780" y2="378" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="412" x2="780" y2="412" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="446" x2="780" y2="446" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="480" x2="780" y2="480" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="514" x2="780" y2="514" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="548" x2="780" y2="548" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="582" x2="780" y2="582" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="616" x2="780" y2="616" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="650" x2="780" y2="650" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="684" x2="780" y2="684" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="718" x2="780" y2="718" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="752" x2="780" y2="752" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="786" x2="780" y2="786" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="820" x2="780" y2="820" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="854" x2="780" y2="854" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="888" x2="780" y2="888" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="922" x2="780" y2="922" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="956" x2="780" y2="956" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="990" x2="780" y2="990" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+<line x1="20" y1="1024" x2="780" y2="1024" stroke="#bfdbfe" stroke-width="1.2" stroke-dasharray="none" />
+
+  
+    <line x1="120" y1="20" x2="120" y2="1080" stroke="#fca5a5" stroke-width="1.4" />
+    <line x1="124" y1="20" x2="124" y2="1080" stroke="#fca5a5" stroke-width="1.4" />
+    <line x1="20" y1="120" x2="780" y2="120" stroke="#fca5a5" stroke-width="1.4" />
+  
+
+  <!-- Notebook Header Box -->
+  <g font-family="'Caveat', cursive" font-size="14" fill="#64748b">
+    <text x="610" y="60">Page No: <tspan font-weight="700" fill="#0f172a">Q-03</tspan></text>
+    <text x="610" y="90">Date: <tspan fill="#0f172a">05 / 11 / 2026</tspan></text>
+    <text x="40" y="70" font-size="13" fill="#94a3b8">LipiScript Benchmark [Marathi]</text>
+    <text x="40" y="92" font-size="11" fill="#cbd5e1">Biology diagram with Marathi text labels</text>
+  </g>
+
+  <!-- Handwritten Body Content -->
+  <g transform="rotate(0 400 550)">
+    
+      <text x="135" y="170" font-family="'Kalam', cursive, sans-serif" font-size="22" font-weight="700" fill="#1e3a8a">
+        मराठी स्वाध्याय व टिपणे
+      </text>
+    
+      <text x="135" y="204" font-family="'Kalam', cursive, sans-serif" font-size="18" font-weight="400" fill="#1e3a8a">
+        १. न्यूटनचा गतिविषयक दुसरा नियम:
+      </text>
+    
+      <text x="135" y="238" font-family="'Kalam', cursive, sans-serif" font-size="18" font-weight="400" fill="#1e3a8a">
+           बल (F) = वस्तुमान (m) × त्वरण (a)
+      </text>
+    
+      <text x="135" y="272" font-family="'Kalam', cursive, sans-serif" font-size="18" font-weight="400" fill="#1e3a8a">
+        २. ऊर्जा अक्षय्यतेचा नियम: ऊर्जा निर्माण करता येत नाही आणि नष्टही करता येत नाही.
+      </text>
+    
+      <text x="135" y="306" font-family="'Kalam', cursive, sans-serif" font-size="18" font-weight="400" fill="#1e3a8a">
+        ३. समीकरण: E = mc^2 (आईनस्टाईनचे वस्तुमान-ऊर्जा समीकरण)
+      </text>
+    
+      <text x="135" y="340" font-family="'Kalam', cursive, sans-serif" font-size="18" font-weight="400" fill="#1e3a8a">
+        टीप: विज्ञानातील व्याख्या मराठीत समजून घेणे अधिक सुलभ होते.
+      </text>
+    
+    
+    
+      <g stroke="#1e3a8a" stroke-width="1.8" fill="none" transform="translate(160, 394)">
+        <!-- Hand-drawn block diagram sketch -->
+        <rect x="20" y="20" width="120" height="50" rx="8" stroke-dasharray="2,1" />
+        <text x="35" y="50" font-family="'Kalam', cursive, sans-serif" font-size="14" fill="#1e3a8a">Input Layer</text>
+        
+        <line x1="140" y1="45" x2="190" y2="45" marker-end="url(#arrow)" />
+        
+        <rect x="190" y="20" width="140" height="50" rx="8" />
+        <text x="205" y="50" font-family="'Kalam', cursive, sans-serif" font-size="14" fill="#1e3a8a">Shaping Engine</text>
+        
+        <line x1="330" y1="45" x2="380" y2="45" marker-end="url(#arrow)" />
+        
+        <rect x="380" y="20" width="120" height="50" rx="8" />
+        <text x="395" y="50" font-family="'Kalam', cursive, sans-serif" font-size="14" fill="#1e3a8a">Vector PDF</text>
+      </g>
+    
+  </g>
+</svg>

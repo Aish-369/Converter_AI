@@ -1,0 +1,19 @@
+# GT-10 Ground-Truth Transcript (Mixed-Language - Difficult)
+# Subject: Database Management Systems & Architecture
+# Difficulty: Difficult | Mixed script, tables, diagram callouts, illegible region
+
+RDBMS architecture मध्ये relational schema आणि normalization अत्यंत महत्त्वाचे मानले जातात.
+
+| Component | Function | Memory Type |
+|---|---|---|
+| Buffer Pool | Caching disk pages | Volatile RAM |
+| Redo Log | Crash recovery & durability | Non-volatile Disk |
+| Query Optimizer | Cost-based plan generation | CPU Cache |
+
+लक्षात ठेवा: ACID properties पैकी Isolation level ठरवताना [illegible] concurrency anomalies निर्माण होऊ नयेत याची काळजी घ्यावी लागते.
+
+### Diagram Labels
+- Client Application Interface
+- SQL Parser & Semantic Checker
+- Storage Engine Layer
+- Data Files (*.ibd)

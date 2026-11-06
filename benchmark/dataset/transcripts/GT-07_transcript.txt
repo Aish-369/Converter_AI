@@ -1,0 +1,12 @@
+# GT-07 Ground-Truth Transcript (English - Easy)
+# Subject: Classical Mechanics & Newton's Laws
+# Difficulty: Easy | Clear textbook notes, neat handwriting
+
+Classical mechanics describes the motion of macroscopic objects. Isaac Newton formulated three fundamental laws of motion that govern physical interactions.
+
+Summary of Principles:
+1. First Law: An object remains at rest or in uniform motion unless acted upon by an external net force.
+2. Second Law: The rate of change of momentum is directly proportional to the applied force ($F = ma$).
+3. Third Law: For every action, there is an equal and opposite reaction.
+
+These principles form the foundation of civil engineering, aeronautics, and mechanical systems.

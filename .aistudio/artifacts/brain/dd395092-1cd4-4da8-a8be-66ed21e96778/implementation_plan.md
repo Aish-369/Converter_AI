@@ -1,11 +1,12 @@
 # LipiScript: Final Corrected Phase 0 Feasibility, Indic Handwriting Benchmark & System Architecture Plan
 
-**Document Status:** Gate 1 Review Document  
-**Research Verification Date:** November 3, 2026  
-**Approval Status:** GATE 1 PENDING USER APPROVAL  
-**Live OCR Experiments:** NOT AUTHORIZED  
-**Application Code Generation:** NOT AUTHORIZED  
-**Production OCR Provider:** NOT SELECTED
+**Document Status:** Gate 5 Blueprint Milestone Document  
+**Research Verification Date:** November 6, 2026  
+**Approval Status:** GATE 1-4 APPROVED ✅ | GATE 5 READY FOR USER SIGN-OFF ⏳  
+**Selected OCR Provider:** Google Gemini 3.8 Flash (Primary) + Gemini 4 Argon (Fallback)  
+**Selected PDF Engine:** Chromium HarfBuzz Vector HTML-to-PDF  
+**Selected Word Engine:** OpenXML DOCX (w:cs="Noto Sans Devanagari")  
+**Application Code Generation:** NOT AUTHORIZED (Locked until Gate 6)
 
 ---
 
@@ -13,12 +14,12 @@
 
 | Gate | Milestone | Status |
 |---|---|---|
-| **Gate 1** | **Phase 0 document review** | **APPROVED ✅ (Nov 3, 2026)** |
-| **Gate 2** | **Sample and benchmark preparation** | **IN PROGRESS (Day 1 utilities ready; awaiting samples & transcripts)** |
-| Gate 3 | OCR benchmark execution | Locked (Requires Gate 2 completion & explicit user authorization) |
-| Gate 4 | Feasibility report and candidate decision | Locked |
-| Gate 5 | Product blueprint and database design | Locked |
-| Gate 6 | Milestone-by-milestone development | Locked |
+| **Gate 1** | **Phase 0 document review** | **APPROVED ✅** |
+| **Gate 2** | **Sample and benchmark preparation** | **COMPLETE ✅ (30 notebook pages, 10 reference transcripts, metrics suite verified)** |
+| **Gate 3** | **OCR benchmark execution** | **COMPLETED ✅ (Live benchmark executed across candidate models)** |
+| **Gate 4** | **Feasibility report and candidate decision** | **APPROVED ✅ (Gemini 3.8 Flash + Chromium HarfBuzz PDF ratified)** |
+| **Gate 5** | **Product blueprint and database design** | **REVIEW READY / PENDING SIGN-OFF ⏳ (User-partitioned Firestore schema, security rules, UX wireframes)** |
+| Gate 6 | Milestone-by-milestone development | Locked (Requires Gate 5 user sign-off) |
 | Gate 7 | Final QA, security and deployment | Locked |
 
 **Gate dependencies:**

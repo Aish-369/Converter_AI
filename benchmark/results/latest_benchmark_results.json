@@ -1,0 +1,1650 @@
+{
+  "detailedResults": [
+    {
+      "pageId": "GT-01",
+      "language": "Marathi",
+      "difficulty": "Easy",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-01 Ground-Truth Transcript (Marathi - Easy)\n# Subject: महाराष्ट्राचा इतिहास व भूगोल (History & Geography of Maharashtra)\n# Difficulty: Easy | Clear handwriting, standard orthography, intact shirorekha\n\nमहाराष्ट्राची भौगोलिक रचना अत्यंत वैशिष्ट्यपूर्ण आहे. पश्चिमेस अरबी समुद्र पसरलेला असून त्याला लागून सह्याद्री पर्वतरांग उत्तर-दक्षिण दिशेने उभी आहे.\n\nसह्याद्रीमुळे महाराष्ट्राचे दोन प्रमुख नैसर्गिक विभाग पडतात:\n१. कोकण किनारपट्टी\n२. दख्खनचे पठार\n\nगोदावरी, भीमा आणि कृष्णा या पठारावरील प्रमुख नद्या पूर्व दिशेने वाहतात. गोदावरी नदीला महाराष्ट्राची जीवनवाहिनी मानले जाते. या नद्यांच्या खोऱ्यात सुपीक काळी जमीन आढळते, ज्यामध्ये कापूस आणि ज्वारीचे दर्जेदार पीक घेतले जाते.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-01 Ground-Truth Transcript (Marathi - Easy)\n# Subject: महाराष्ट्राचा इतिहास व भूगोल (History & Geography of Maharashtra)\n# Difficulty: Easy | Clear handwriting, standard orthography, intact shirorekha\n\nमहाराष्ट्राची भौगोलिक रचना अत्यंत वैशिष्ट्यपूर्ण आहे. पश्चिमेस अरबी समुद्र पसरलेला असून त्याला लागून सह्याद्री पर्वतरांग उत्तर-दक्षिण दिशेने उभी आहे.\n\nसह्याद्रीमुळे महाराष्ट्राचे दोन प्रमुख नैसर्गिक विभाग पडतात:\n१. कोकण किनारपट्टी\n२. दख्खनचे पठार\n\nगोदावरी, भीमा आणि कृष्णा या पठारावरील प्रमुख नद्या पूर्व दिशेने वाहतात. गोदावरी नदीला महाराष्ट्राची जीवनवाहिनी मानले जाते. या नद्यांच्या खोऱ्यात सुपीक काळी जमीन आढळते, ज्यामध्ये कापूस आणि ज्वारीचे दर्जेदार पीक घेतले जाते.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 25,
+          "deletions": 626,
+          "insertions": 0,
+          "totalErrors": 651,
+          "referenceLength": 673,
+          "errorRate": 0.9673
+        },
+        "graphemeClusterCER": {
+          "substitutions": 25,
+          "deletions": 425,
+          "insertions": 0,
+          "totalErrors": 450,
+          "referenceLength": 472,
+          "errorRate": 0.9534
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 87,
+          "insertions": 0,
+          "totalErrors": 92,
+          "referenceLength": 92,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 15,
+          "insertions": 0,
+          "totalErrors": 17,
+          "referenceLength": 18,
+          "errorRate": 0.9444
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-01",
+      "language": "Marathi",
+      "difficulty": "Easy",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-01 Ground-Truth Transcript (Marathi - Easy)\n# Subject: महाराष्ट्राचा इतिहास व भूगोल (History & Geography of Maharashtra)\n# Difficulty: Easy | Clear handwriting, standard orthography, intact shirorekha\n\nमहाराष्ट्राची भौगोलिक रचना अत्यंत वैशिष्ट्यपूर्ण आहे. पश्चिमेस अरबी समुद्र पसरलेला असून त्याला लागून सह्याद्री पर्वतरांग उत्तर-दक्षिण दिशेने उभी आहे.\n\nसह्याद्रीमुळे महाराष्ट्राचे दोन प्रमुख नैसर्गिक विभाग पडतात:\n१. कोकण किनारपट्टी\n२. दख्खनचे पठार\n\nगोदावरी, भीमा आणि कृष्णा या पठारावरील प्रमुख नद्या पूर्व दिशेने वाहतात. गोदावरी नदीला महाराष्ट्राची जीवनवाहिनी मानले जाते. या नद्यांच्या खोऱ्यात सुपीक काळी जमीन आढळते, ज्यामध्ये कापूस आणि ज्वारीचे दर्जेदार पीक घेतले जाते.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-01 Ground-Truth Transcript (Marathi - Easy)\n# Subject: महाराष्ट्राचा इतिहास व भूगोल (History & Geography of Maharashtra)\n# Difficulty: Easy | Clear handwriting, standard orthography, intact shirorekha\n\nमहाराष्ट्राची भौगोलिक रचना अत्यंत वैशिष्ट्यपूर्ण आहे. पश्चिमेस अरबी समुद्र पसरलेला असून त्याला लागून सह्याद्री पर्वतरांग उत्तर-दक्षिण दिशेने उभी आहे.\n\nसह्याद्रीमुळे महाराष्ट्राचे दोन प्रमुख नैसर्गिक विभाग पडतात:\n१. कोकण किनारपट्टी\n२. दख्खनचे पठार\n\nगोदावरी, भीमा आणि कृष्णा या पठारावरील प्रमुख नद्या पूर्व दिशेने वाहतात. गोदावरी नदीला महाराष्ट्राची जीवनवाहिनी मानले जाते. या नद्यांच्या खोऱ्यात सुपीक काळी जमीन आढळते, ज्यामध्ये कापूस आणि ज्वारीचे दर्जेदार पीक घेतले जाते.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 23,
+          "deletions": 628,
+          "insertions": 0,
+          "totalErrors": 651,
+          "referenceLength": 673,
+          "errorRate": 0.9673
+        },
+        "graphemeClusterCER": {
+          "substitutions": 23,
+          "deletions": 427,
+          "insertions": 0,
+          "totalErrors": 450,
+          "referenceLength": 472,
+          "errorRate": 0.9534
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 87,
+          "insertions": 0,
+          "totalErrors": 92,
+          "referenceLength": 92,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 16,
+          "insertions": 0,
+          "totalErrors": 18,
+          "referenceLength": 18,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-01",
+      "language": "Marathi",
+      "difficulty": "Easy",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-01 Ground-Truth Transcript (Marathi - Easy)\n# Subject: महाराष्ट्राचा इतिहास व भूगोल (History & Geography of Maharashtra)\n# Difficulty: Easy | Clear handwriting, standard orthography, intact shirorekha\n\nमहाराष्ट्राची भौगोलिक रचना अत्यंत वैशिष्ट्यपूर्ण आहे. पश्चिमेस अरबी समुद्र पसरलेला असून त्याला लागून सह्याद्री पर्वतरांग उत्तर-दक्षिण दिशेने उभी आहे.\n\nसह्याद्रीमुळे महाराष्ट्राचे दोन प्रमुख नैसर्गिक विभाग पडतात:\n१. कोकण किनारपट्टी\n२. दख्खनचे पठार\n\nगोदावरी, भीमा आणि कृष्णा या पठारावरील प्रमुख नद्या पूर्व दिशेने वाहतात. गोदावरी नदीला महाराष्ट्राची जीवनवाहिनी मानले जाते. या नद्यांच्या खोऱ्यात सुपीक काळी जमीन आढळते, ज्यामध्ये कापूस आणि ज्वारीचे दर्जेदार पीक घेतले जाते.\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-01 Ground-Truth Transcript (Marathi - Easy)\n# Subject: महाराष्ट्राचा इतिहास व भूगोल (History & Geography of Maharashtra)\n# Difficulty: Easy | Clear handwriting, standard orthography, intact shirorekha\n\nमहाराष्ट्राची भौगोलिक रचना अत्यंत वैशिष्ट्यपूर्ण आहे. पश्चिमेस अरबी समुद्र पसरलेला असून त्याला लागून सह्याद्री पर्वतरांग उत्तर-दक्षिण दिशेने उभी आहे.\n\nसह्याद्रीमुळे महाराष्ट्राचे दोन प्रमुख नैसर्गिक विभाग पडतात:\n१. कोकण किनारपट्टी\n२. दख्खनचे पठार\n\nगोदावरी, भीमा आणि कृष्णा या पठारावरील प्रमुख नद्या पूर्व दिशेने वाहतात. गोदावरी नदीला महाराष्ट्राची जीवनवाहिनी मानले जाते. या नद्यांच्या खोऱ्यात सुपीक काळी जमीन आढळते, ज्यामध्ये कापूस आणि ज्वारीचे दर्जेदार पीक घेतले जाते.",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 38,
+          "deletions": 609,
+          "insertions": 0,
+          "totalErrors": 647,
+          "referenceLength": 673,
+          "errorRate": 0.9614
+        },
+        "graphemeClusterCER": {
+          "substitutions": 38,
+          "deletions": 408,
+          "insertions": 0,
+          "totalErrors": 446,
+          "referenceLength": 472,
+          "errorRate": 0.9449
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 87,
+          "insertions": 0,
+          "totalErrors": 92,
+          "referenceLength": 92,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 16,
+          "insertions": 0,
+          "totalErrors": 18,
+          "referenceLength": 18,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-02",
+      "language": "Marathi",
+      "difficulty": "Moderate",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-02 Ground-Truth Transcript (Marathi - Moderate)\n# Subject: औद्योगिक अर्थशास्त्र व्याख्यान (Industrial Economics Lecture)\n# Difficulty: Moderate | Rapid lecture notes, jodakshare (compound consonants)\n\nऔद्योगिक क्रांतीनंतर उत्पादन प्रक्रियेत आमूलाग्र बदल घडून आला. हस्तोद्योगाची जागा यांत्रिक तंत्रज्ञानाने घेतली, ज्यामुळे भांडवल गुंतवणुकीचे महत्त्व वाढले.\n\nप्रमुख मुद्दे:\n- कच्च्या मालाची उपलब्धता आणि वाहतूक खर्च यांचा थेट संबंध उत्पादनाच्या किमतीवर होतो.\n- कामगारांची कार्यक्षमता वाढवण्यासाठी योग्य प्रशिक्षण आवश्यक असते.\n- जागतिकीकरणाच्या दृष्टिकोनातून लघुउद्योगांसमोर बहुराष्ट्रीय कंपन्यांची मोठी स्पर्धा निर्माण झाली आहे.\n\nशासनाने विशेष आर्थिक क्षेत्र (SEZ) जाहीर करून स्थानिक रोजगाराला चालना देण्याचा प्रयत्न केला आहे.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-02 Ground-Truth Transcript (Marathi - Moderate)\n# Subject: औद्योगिक अर्थशास्त्र व्याख्यान (Industrial Economics Lecture)\n# Difficulty: Moderate | Rapid lecture notes, jodakshare (compound consonants)\n\nऔद्योगिक क्रांतीनंतर उत्पादन प्रक्रियेत आमूलाग्र बदल घडून आला. हस्तोद्योगाची जागा यांत्रिक तंत्रज्ञानाने घेतली, ज्यामुळे भांडवल गुंतवणुकीचे महत्त्व वाढले.\n\nप्रमुख मुद्दे:\n- कच्च्या मालाची उपलब्धता आणि वाहतूक खर्च यांचा थेट संबंध उत्पादनाच्या किमतीवर होतो.\n- कामगारांची कार्यक्षमता वाढवण्यासाठी योग्य प्रशिक्षण आवश्यक असते.\n- जागतिकीकरणाच्या दृष्टिकोनातून लघुउद्योगांसमोर बहुराष्ट्रीय कंपन्यांची मोठी स्पर्धा निर्माण झाली आहे.\n\nशासनाने विशेष आर्थिक क्षेत्र (SEZ) जाहीर करून स्थानिक रोजगाराला चालना देण्याचा प्रयत्न केला आहे.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 23,
+          "deletions": 679,
+          "insertions": 0,
+          "totalErrors": 702,
+          "referenceLength": 726,
+          "errorRate": 0.9669
+        },
+        "graphemeClusterCER": {
+          "substitutions": 23,
+          "deletions": 440,
+          "insertions": 0,
+          "totalErrors": 463,
+          "referenceLength": 487,
+          "errorRate": 0.9507
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 86,
+          "insertions": 0,
+          "totalErrors": 91,
+          "referenceLength": 91,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 16,
+          "insertions": 0,
+          "totalErrors": 18,
+          "referenceLength": 19,
+          "errorRate": 0.9474
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-02",
+      "language": "Marathi",
+      "difficulty": "Moderate",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-02 Ground-Truth Transcript (Marathi - Moderate)\n# Subject: औद्योगिक अर्थशास्त्र व्याख्यान (Industrial Economics Lecture)\n# Difficulty: Moderate | Rapid lecture notes, jodakshare (compound consonants)\n\nऔद्योगिक क्रांतीनंतर उत्पादन प्रक्रियेत आमूलाग्र बदल घडून आला. हस्तोद्योगाची जागा यांत्रिक तंत्रज्ञानाने घेतली, ज्यामुळे भांडवल गुंतवणुकीचे महत्त्व वाढले.\n\nप्रमुख मुद्दे:\n- कच्च्या मालाची उपलब्धता आणि वाहतूक खर्च यांचा थेट संबंध उत्पादनाच्या किमतीवर होतो.\n- कामगारांची कार्यक्षमता वाढवण्यासाठी योग्य प्रशिक्षण आवश्यक असते.\n- जागतिकीकरणाच्या दृष्टिकोनातून लघुउद्योगांसमोर बहुराष्ट्रीय कंपन्यांची मोठी स्पर्धा निर्माण झाली आहे.\n\nशासनाने विशेष आर्थिक क्षेत्र (SEZ) जाहीर करून स्थानिक रोजगाराला चालना देण्याचा प्रयत्न केला आहे.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-02 Ground-Truth Transcript (Marathi - Moderate)\n# Subject: औद्योगिक अर्थशास्त्र व्याख्यान (Industrial Economics Lecture)\n# Difficulty: Moderate | Rapid lecture notes, jodakshare (compound consonants)\n\nऔद्योगिक क्रांतीनंतर उत्पादन प्रक्रियेत आमूलाग्र बदल घडून आला. हस्तोद्योगाची जागा यांत्रिक तंत्रज्ञानाने घेतली, ज्यामुळे भांडवल गुंतवणुकीचे महत्त्व वाढले.\n\nप्रमुख मुद्दे:\n- कच्च्या मालाची उपलब्धता आणि वाहतूक खर्च यांचा थेट संबंध उत्पादनाच्या किमतीवर होतो.\n- कामगारांची कार्यक्षमता वाढवण्यासाठी योग्य प्रशिक्षण आवश्यक असते.\n- जागतिकीकरणाच्या दृष्टिकोनातून लघुउद्योगांसमोर बहुराष्ट्रीय कंपन्यांची मोठी स्पर्धा निर्माण झाली आहे.\n\nशासनाने विशेष आर्थिक क्षेत्र (SEZ) जाहीर करून स्थानिक रोजगाराला चालना देण्याचा प्रयत्न केला आहे.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 22,
+          "deletions": 681,
+          "insertions": 0,
+          "totalErrors": 703,
+          "referenceLength": 726,
+          "errorRate": 0.9683
+        },
+        "graphemeClusterCER": {
+          "substitutions": 22,
+          "deletions": 442,
+          "insertions": 0,
+          "totalErrors": 464,
+          "referenceLength": 487,
+          "errorRate": 0.9528
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 86,
+          "insertions": 0,
+          "totalErrors": 91,
+          "referenceLength": 91,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 17,
+          "insertions": 0,
+          "totalErrors": 19,
+          "referenceLength": 19,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-02",
+      "language": "Marathi",
+      "difficulty": "Moderate",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-02 Ground-Truth Transcript (Marathi - Moderate)\n# Subject: औद्योगिक अर्थशास्त्र व्याख्यान (Industrial Economics Lecture)\n# Difficulty: Moderate | Rapid lecture notes, jodakshare (compound consonants)\n\nऔद्योगिक क्रांतीनंतर उत्पादन प्रक्रियेत आमूलाग्र बदल घडून आला. हस्तोद्योगाची जागा यांत्रिक तंत्रज्ञानाने घेतली, ज्यामुळे भांडवल गुंतवणुकीचे महत्त्व वाढले.\n\nप्रमुख मुद्दे:\n- कच्च्या मालाची उपलब्धता आणि वाहतूक खर्च यांचा थेट संबंध उत्पादनाच्या किमतीवर होतो.\n- कामगारांची कार्यक्षमता वाढवण्यासाठी योग्य प्रशिक्षण आवश्यक असते.\n- जागतिकीकरणाच्या दृष्टिकोनातून लघुउद्योगांसमोर बहुराष्ट्रीय कंपन्यांची मोठी स्पर्धा निर्माण झाली आहे.\n\nशासनाने विशेष आर्थिक क्षेत्र (SEZ) जाहीर करून स्थानिक रोजगाराला चालना देण्याचा प्रयत्न केला आहे.\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-02 Ground-Truth Transcript (Marathi - Moderate)\n# Subject: औद्योगिक अर्थशास्त्र व्याख्यान (Industrial Economics Lecture)\n# Difficulty: Moderate | Rapid lecture notes, jodakshare (compound consonants)\n\nऔद्योगिक क्रांतीनंतर उत्पादन प्रक्रियेत आमूलाग्र बदल घडून आला. हस्तोद्योगाची जागा यांत्रिक तंत्रज्ञानाने घेतली, ज्यामुळे भांडवल गुंतवणुकीचे महत्त्व वाढले.\n\nप्रमुख मुद्दे:\n- कच्च्या मालाची उपलब्धता आणि वाहतूक खर्च यांचा थेट संबंध उत्पादनाच्या किमतीवर होतो.\n- कामगारांची कार्यक्षमता वाढवण्यासाठी योग्य प्रशिक्षण आवश्यक असते.\n- जागतिकीकरणाच्या दृष्टिकोनातून लघुउद्योगांसमोर बहुराष्ट्रीय कंपन्यांची मोठी स्पर्धा निर्माण झाली आहे.\n\nशासनाने विशेष आर्थिक क्षेत्र (SEZ) जाहीर करून स्थानिक रोजगाराला चालना देण्याचा प्रयत्न केला आहे.",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 36,
+          "deletions": 662,
+          "insertions": 0,
+          "totalErrors": 698,
+          "referenceLength": 726,
+          "errorRate": 0.9614
+        },
+        "graphemeClusterCER": {
+          "substitutions": 36,
+          "deletions": 423,
+          "insertions": 0,
+          "totalErrors": 459,
+          "referenceLength": 487,
+          "errorRate": 0.9425
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 86,
+          "insertions": 0,
+          "totalErrors": 91,
+          "referenceLength": 91,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 17,
+          "insertions": 0,
+          "totalErrors": 19,
+          "referenceLength": 19,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-03",
+      "language": "Marathi",
+      "difficulty": "Difficult",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-03 Ground-Truth Transcript (Marathi - Difficult)\n# Subject: जुनी दैनंदिनी व विचार (Old Journal & Reflections)\n# Difficulty: Difficult | Cursive slant, broken lines, ink fading, ambiguous region\n\nमनुष्याच्या जीवनात संयम आणि कष्टाची जोड असल्याशिवाय यश संपादन करणे अशक्य आहे. आजच्या धावपळीच्या युगात आपण आपल्या मूळ मूल्यांकडे दुर्लक्ष करत आहोत.\n\nसंध्याकाळच्या वेळी नदीकाठी बसून विचार करताना जाणवले की [illegible] टिकवून ठेवणे हीच खरी साधना आहे. बाह्य परिस्थिती कितीही प्रतिकूल असली तरी अंतर्मनाची शांतता ढळू देऊ नये.\n\nनिसर्गाचे नियम त्रिकालाबाधित आहेत. जे पेराल तेच उगवते, हा सनातन सिद्धांत प्रत्येकाने लक्षात ठेवला पाहिजे.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-03 Ground-Truth Transcript (Marathi - Difficult)\n# Subject: जुनी दैनंदिनी व विचार (Old Journal & Reflections)\n# Difficulty: Difficult | Cursive slant, broken lines, ink fading, ambiguous region\n\nमनुष्याच्या जीवनात संयम आणि कष्टाची जोड असल्याशिवाय यश संपादन करणे अशक्य आहे. आजच्या धावपळीच्या युगात आपण आपल्या मूळ मूल्यांकडे दुर्लक्ष करत आहोत.\n\nसंध्याकाळच्या वेळी नदीकाठी बसून विचार करताना जाणवले की [illegible] टिकवून ठेवणे हीच खरी साधना आहे. बाह्य परिस्थिती कितीही प्रतिकूल असली तरी अंतर्मनाची शांतता ढळू देऊ नये.\n\nनिसर्गाचे नियम त्रिकालाबाधित आहेत. जे पेराल तेच उगवते, हा सनातन सिद्धांत प्रत्येकाने लक्षात ठेवला पाहिजे.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 25,
+          "deletions": 563,
+          "insertions": 0,
+          "totalErrors": 588,
+          "referenceLength": 610,
+          "errorRate": 0.9639
+        },
+        "graphemeClusterCER": {
+          "substitutions": 25,
+          "deletions": 403,
+          "insertions": 0,
+          "totalErrors": 428,
+          "referenceLength": 450,
+          "errorRate": 0.9511
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 86,
+          "insertions": 0,
+          "totalErrors": 91,
+          "referenceLength": 91,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 1,
+          "deletions": 15,
+          "insertions": 0,
+          "totalErrors": 16,
+          "referenceLength": 18,
+          "errorRate": 0.8889
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 1,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-03",
+      "language": "Marathi",
+      "difficulty": "Difficult",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-03 Ground-Truth Transcript (Marathi - Difficult)\n# Subject: जुनी दैनंदिनी व विचार (Old Journal & Reflections)\n# Difficulty: Difficult | Cursive slant, broken lines, ink fading, ambiguous region\n\nमनुष्याच्या जीवनात संयम आणि कष्टाची जोड असल्याशिवाय यश संपादन करणे अशक्य आहे. आजच्या धावपळीच्या युगात आपण आपल्या मूळ मूल्यांकडे दुर्लक्ष करत आहोत.\n\nसंध्याकाळच्या वेळी नदीकाठी बसून विचार करताना जाणवले की [illegible] टिकवून ठेवणे हीच खरी साधना आहे. बाह्य परिस्थिती कितीही प्रतिकूल असली तरी अंतर्मनाची शांतता ढळू देऊ नये.\n\nनिसर्गाचे नियम त्रिकालाबाधित आहेत. जे पेराल तेच उगवते, हा सनातन सिद्धांत प्रत्येकाने लक्षात ठेवला पाहिजे.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-03 Ground-Truth Transcript (Marathi - Difficult)\n# Subject: जुनी दैनंदिनी व विचार (Old Journal & Reflections)\n# Difficulty: Difficult | Cursive slant, broken lines, ink fading, ambiguous region\n\nमनुष्याच्या जीवनात संयम आणि कष्टाची जोड असल्याशिवाय यश संपादन करणे अशक्य आहे. आजच्या धावपळीच्या युगात आपण आपल्या मूळ मूल्यांकडे दुर्लक्ष करत आहोत.\n\nसंध्याकाळच्या वेळी नदीकाठी बसून विचार करताना जाणवले की [illegible] टिकवून ठेवणे हीच खरी साधना आहे. बाह्य परिस्थिती कितीही प्रतिकूल असली तरी अंतर्मनाची शांतता ढळू देऊ नये.\n\nनिसर्गाचे नियम त्रिकालाबाधित आहेत. जे पेराल तेच उगवते, हा सनातन सिद्धांत प्रत्येकाने लक्षात ठेवला पाहिजे.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 20,
+          "deletions": 565,
+          "insertions": 0,
+          "totalErrors": 585,
+          "referenceLength": 610,
+          "errorRate": 0.959
+        },
+        "graphemeClusterCER": {
+          "substitutions": 20,
+          "deletions": 405,
+          "insertions": 0,
+          "totalErrors": 425,
+          "referenceLength": 450,
+          "errorRate": 0.9444
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 86,
+          "insertions": 0,
+          "totalErrors": 91,
+          "referenceLength": 91,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 0,
+          "deletions": 16,
+          "insertions": 0,
+          "totalErrors": 16,
+          "referenceLength": 18,
+          "errorRate": 0.8889
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 1,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-03",
+      "language": "Marathi",
+      "difficulty": "Difficult",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-03 Ground-Truth Transcript (Marathi - Difficult)\n# Subject: जुनी दैनंदिनी व विचार (Old Journal & Reflections)\n# Difficulty: Difficult | Cursive slant, broken lines, ink fading, ambiguous region\n\nमनुष्याच्या जीवनात संयम आणि कष्टाची जोड असल्याशिवाय यश संपादन करणे अशक्य आहे. आजच्या धावपळीच्या युगात आपण आपल्या मूळ मूल्यांकडे दुर्लक्ष करत आहोत.\n\nसंध्याकाळच्या वेळी नदीकाठी बसून विचार करताना जाणवले की [illegible] टिकवून ठेवणे हीच खरी साधना आहे. बाह्य परिस्थिती कितीही प्रतिकूल असली तरी अंतर्मनाची शांतता ढळू देऊ नये.\n\nनिसर्गाचे नियम त्रिकालाबाधित आहेत. जे पेराल तेच उगवते, हा सनातन सिद्धांत प्रत्येकाने लक्षात ठेवला पाहिजे.\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-03 Ground-Truth Transcript (Marathi - Difficult)\n# Subject: जुनी दैनंदिनी व विचार (Old Journal & Reflections)\n# Difficulty: Difficult | Cursive slant, broken lines, ink fading, ambiguous region\n\nमनुष्याच्या जीवनात संयम आणि कष्टाची जोड असल्याशिवाय यश संपादन करणे अशक्य आहे. आजच्या धावपळीच्या युगात आपण आपल्या मूळ मूल्यांकडे दुर्लक्ष करत आहोत.\n\nसंध्याकाळच्या वेळी नदीकाठी बसून विचार करताना जाणवले की [illegible] टिकवून ठेवणे हीच खरी साधना आहे. बाह्य परिस्थिती कितीही प्रतिकूल असली तरी अंतर्मनाची शांतता ढळू देऊ नये.\n\nनिसर्गाचे नियम त्रिकालाबाधित आहेत. जे पेराल तेच उगवते, हा सनातन सिद्धांत प्रत्येकाने लक्षात ठेवला पाहिजे.",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 38,
+          "deletions": 546,
+          "insertions": 0,
+          "totalErrors": 584,
+          "referenceLength": 610,
+          "errorRate": 0.9574
+        },
+        "graphemeClusterCER": {
+          "substitutions": 38,
+          "deletions": 386,
+          "insertions": 0,
+          "totalErrors": 424,
+          "referenceLength": 450,
+          "errorRate": 0.9422
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 86,
+          "insertions": 0,
+          "totalErrors": 91,
+          "referenceLength": 91,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 0,
+          "deletions": 16,
+          "insertions": 0,
+          "totalErrors": 16,
+          "referenceLength": 18,
+          "errorRate": 0.8889
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 1,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-04",
+      "language": "Hindi",
+      "difficulty": "Easy",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-04 Ground-Truth Transcript (Hindi - Easy)\n# Subject: पर्यावरण संरक्षण और समाज (Environmental Protection & Society)\n# Difficulty: Easy | Clear formal handwriting, standard Devanagari script\n\nपर्यावरण और मानव जीवन का संबंध अत्यंत गहरा है। पेड़-पौधे हमें न केवल ऑक्सीजन प्रदान करते हैं, बल्कि वे मिट्टी के कटाव को भी रोकते हैं।\n\nमुख्य बिंदु:\n१. वनों की कटाई से वर्षा चक्र प्रभावित हो रहा है।\n२. नदियों में औद्योगिक अपशिष्ट बहाने से जल प्रदूषण तेजी से बढ़ रहा है।\n३. नवीकरणीय ऊर्जा स्रोतों जैसे सौर ऊर्जा और पवन ऊर्जा का उपयोग बढ़ाना अनिवार्य है।\n\nयदि हमने समय रहते उचित कदम नहीं उठाए, तो आने वाली पीढ़ियों को गंभीर जल संकट का सामना करना पड़ेगा।\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-04 Ground-Truth Transcript (Hindi - Easy)\n# Subject: पर्यावरण संरक्षण और समाज (Environmental Protection & Society)\n# Difficulty: Easy | Clear formal handwriting, standard Devanagari script\n\nपर्यावरण और मानव जीवन का संबंध अत्यंत गहरा है। पेड़-पौधे हमें न केवल ऑक्सीजन प्रदान करते हैं, बल्कि वे मिट्टी के कटाव को भी रोकते हैं।\n\nमुख्य बिंदु:\n१. वनों की कटाई से वर्षा चक्र प्रभावित हो रहा है।\n२. नदियों में औद्योगिक अपशिष्ट बहाने से जल प्रदूषण तेजी से बढ़ रहा है।\n३. नवीकरणीय ऊर्जा स्रोतों जैसे सौर ऊर्जा और पवन ऊर्जा का उपयोग बढ़ाना अनिवार्य है।\n\nयदि हमने समय रहते उचित कदम नहीं उठाए, तो आने वाली पीढ़ियों को गंभीर जल संकट का सामना करना पड़ेगा।",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 23,
+          "deletions": 596,
+          "insertions": 0,
+          "totalErrors": 619,
+          "referenceLength": 643,
+          "errorRate": 0.9627
+        },
+        "graphemeClusterCER": {
+          "substitutions": 23,
+          "deletions": 441,
+          "insertions": 0,
+          "totalErrors": 464,
+          "referenceLength": 488,
+          "errorRate": 0.9508
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 110,
+          "insertions": 0,
+          "totalErrors": 115,
+          "referenceLength": 115,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 16,
+          "insertions": 0,
+          "totalErrors": 18,
+          "referenceLength": 19,
+          "errorRate": 0.9474
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-04",
+      "language": "Hindi",
+      "difficulty": "Easy",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-04 Ground-Truth Transcript (Hindi - Easy)\n# Subject: पर्यावरण संरक्षण और समाज (Environmental Protection & Society)\n# Difficulty: Easy | Clear formal handwriting, standard Devanagari script\n\nपर्यावरण और मानव जीवन का संबंध अत्यंत गहरा है। पेड़-पौधे हमें न केवल ऑक्सीजन प्रदान करते हैं, बल्कि वे मिट्टी के कटाव को भी रोकते हैं।\n\nमुख्य बिंदु:\n१. वनों की कटाई से वर्षा चक्र प्रभावित हो रहा है।\n२. नदियों में औद्योगिक अपशिष्ट बहाने से जल प्रदूषण तेजी से बढ़ रहा है।\n३. नवीकरणीय ऊर्जा स्रोतों जैसे सौर ऊर्जा और पवन ऊर्जा का उपयोग बढ़ाना अनिवार्य है।\n\nयदि हमने समय रहते उचित कदम नहीं उठाए, तो आने वाली पीढ़ियों को गंभीर जल संकट का सामना करना पड़ेगा।\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-04 Ground-Truth Transcript (Hindi - Easy)\n# Subject: पर्यावरण संरक्षण और समाज (Environmental Protection & Society)\n# Difficulty: Easy | Clear formal handwriting, standard Devanagari script\n\nपर्यावरण और मानव जीवन का संबंध अत्यंत गहरा है। पेड़-पौधे हमें न केवल ऑक्सीजन प्रदान करते हैं, बल्कि वे मिट्टी के कटाव को भी रोकते हैं।\n\nमुख्य बिंदु:\n१. वनों की कटाई से वर्षा चक्र प्रभावित हो रहा है।\n२. नदियों में औद्योगिक अपशिष्ट बहाने से जल प्रदूषण तेजी से बढ़ रहा है।\n३. नवीकरणीय ऊर्जा स्रोतों जैसे सौर ऊर्जा और पवन ऊर्जा का उपयोग बढ़ाना अनिवार्य है।\n\nयदि हमने समय रहते उचित कदम नहीं उठाए, तो आने वाली पीढ़ियों को गंभीर जल संकट का सामना करना पड़ेगा।",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 22,
+          "deletions": 598,
+          "insertions": 0,
+          "totalErrors": 620,
+          "referenceLength": 643,
+          "errorRate": 0.9642
+        },
+        "graphemeClusterCER": {
+          "substitutions": 22,
+          "deletions": 443,
+          "insertions": 0,
+          "totalErrors": 465,
+          "referenceLength": 488,
+          "errorRate": 0.9529
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 110,
+          "insertions": 0,
+          "totalErrors": 115,
+          "referenceLength": 115,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 17,
+          "insertions": 0,
+          "totalErrors": 19,
+          "referenceLength": 19,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-04",
+      "language": "Hindi",
+      "difficulty": "Easy",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-04 Ground-Truth Transcript (Hindi - Easy)\n# Subject: पर्यावरण संरक्षण और समाज (Environmental Protection & Society)\n# Difficulty: Easy | Clear formal handwriting, standard Devanagari script\n\nपर्यावरण और मानव जीवन का संबंध अत्यंत गहरा है। पेड़-पौधे हमें न केवल ऑक्सीजन प्रदान करते हैं, बल्कि वे मिट्टी के कटाव को भी रोकते हैं।\n\nमुख्य बिंदु:\n१. वनों की कटाई से वर्षा चक्र प्रभावित हो रहा है।\n२. नदियों में औद्योगिक अपशिष्ट बहाने से जल प्रदूषण तेजी से बढ़ रहा है।\n३. नवीकरणीय ऊर्जा स्रोतों जैसे सौर ऊर्जा और पवन ऊर्जा का उपयोग बढ़ाना अनिवार्य है।\n\nयदि हमने समय रहते उचित कदम नहीं उठाए, तो आने वाली पीढ़ियों को गंभीर जल संकट का सामना करना पड़ेगा।\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-04 Ground-Truth Transcript (Hindi - Easy)\n# Subject: पर्यावरण संरक्षण और समाज (Environmental Protection & Society)\n# Difficulty: Easy | Clear formal handwriting, standard Devanagari script\n\nपर्यावरण और मानव जीवन का संबंध अत्यंत गहरा है। पेड़-पौधे हमें न केवल ऑक्सीजन प्रदान करते हैं, बल्कि वे मिट्टी के कटाव को भी रोकते हैं।\n\nमुख्य बिंदु:\n१. वनों की कटाई से वर्षा चक्र प्रभावित हो रहा है।\n२. नदियों में औद्योगिक अपशिष्ट बहाने से जल प्रदूषण तेजी से बढ़ रहा है।\n३. नवीकरणीय ऊर्जा स्रोतों जैसे सौर ऊर्जा और पवन ऊर्जा का उपयोग बढ़ाना अनिवार्य है।\n\nयदि हमने समय रहते उचित कदम नहीं उठाए, तो आने वाली पीढ़ियों को गंभीर जल संकट का सामना करना पड़ेगा।",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 38,
+          "deletions": 579,
+          "insertions": 0,
+          "totalErrors": 617,
+          "referenceLength": 643,
+          "errorRate": 0.9596
+        },
+        "graphemeClusterCER": {
+          "substitutions": 38,
+          "deletions": 424,
+          "insertions": 0,
+          "totalErrors": 462,
+          "referenceLength": 488,
+          "errorRate": 0.9467
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 110,
+          "insertions": 0,
+          "totalErrors": 115,
+          "referenceLength": 115,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 17,
+          "insertions": 0,
+          "totalErrors": 19,
+          "referenceLength": 19,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-05",
+      "language": "Hindi",
+      "difficulty": "Moderate",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-05 Ground-Truth Transcript (Hindi - Moderate)\n# Subject: सामान्य विज्ञान एवं प्रौद्योगिकी (General Science & Technology)\n# Difficulty: Moderate | Rapid notes, abbreviations, irregular word spacing\n\nदैनिक जीवन में प्रकाश का परावर्तन और अपवर्तन महत्वपूर्ण भूमिका निभाता है। लेंस और दर्पण के नियमों पर कई आधुनिक उपकरण आधारित हैं।\n\nअवलोकन:\n- उत्तल लेंस प्रकाश किरणों को एक बिंदु पर केंद्रित करता है।\n- दूरबीन और सूक्ष्मदर्शी में विभिन्न फोकस दूरी के लेंसों का संयोजन प्रयुक्त होता है।\n- फाइबर ऑप्टिक्स में पूर्ण आंतरिक परावर्तन (TIR) के सिद्धांत पर तीव्र गति से डेटा संचार संभव होता है।\n\nसंचार क्रांति ने सूचनाओं के आदान-प्रदान को अभूतपूर्व गति प्रदान की है।\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-05 Ground-Truth Transcript (Hindi - Moderate)\n# Subject: सामान्य विज्ञान एवं प्रौद्योगिकी (General Science & Technology)\n# Difficulty: Moderate | Rapid notes, abbreviations, irregular word spacing\n\nदैनिक जीवन में प्रकाश का परावर्तन और अपवर्तन महत्वपूर्ण भूमिका निभाता है। लेंस और दर्पण के नियमों पर कई आधुनिक उपकरण आधारित हैं।\n\nअवलोकन:\n- उत्तल लेंस प्रकाश किरणों को एक बिंदु पर केंद्रित करता है।\n- दूरबीन और सूक्ष्मदर्शी में विभिन्न फोकस दूरी के लेंसों का संयोजन प्रयुक्त होता है।\n- फाइबर ऑप्टिक्स में पूर्ण आंतरिक परावर्तन (TIR) के सिद्धांत पर तीव्र गति से डेटा संचार संभव होता है।\n\nसंचार क्रांति ने सूचनाओं के आदान-प्रदान को अभूतपूर्व गति प्रदान की है।",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 24,
+          "deletions": 609,
+          "insertions": 0,
+          "totalErrors": 633,
+          "referenceLength": 656,
+          "errorRate": 0.9649
+        },
+        "graphemeClusterCER": {
+          "substitutions": 24,
+          "deletions": 433,
+          "insertions": 0,
+          "totalErrors": 457,
+          "referenceLength": 480,
+          "errorRate": 0.9521
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 104,
+          "insertions": 0,
+          "totalErrors": 109,
+          "referenceLength": 109,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 3,
+          "deletions": 14,
+          "insertions": 0,
+          "totalErrors": 17,
+          "referenceLength": 17,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-05",
+      "language": "Hindi",
+      "difficulty": "Moderate",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-05 Ground-Truth Transcript (Hindi - Moderate)\n# Subject: सामान्य विज्ञान एवं प्रौद्योगिकी (General Science & Technology)\n# Difficulty: Moderate | Rapid notes, abbreviations, irregular word spacing\n\nदैनिक जीवन में प्रकाश का परावर्तन और अपवर्तन महत्वपूर्ण भूमिका निभाता है। लेंस और दर्पण के नियमों पर कई आधुनिक उपकरण आधारित हैं।\n\nअवलोकन:\n- उत्तल लेंस प्रकाश किरणों को एक बिंदु पर केंद्रित करता है।\n- दूरबीन और सूक्ष्मदर्शी में विभिन्न फोकस दूरी के लेंसों का संयोजन प्रयुक्त होता है।\n- फाइबर ऑप्टिक्स में पूर्ण आंतरिक परावर्तन (TIR) के सिद्धांत पर तीव्र गति से डेटा संचार संभव होता है।\n\nसंचार क्रांति ने सूचनाओं के आदान-प्रदान को अभूतपूर्व गति प्रदान की है।\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-05 Ground-Truth Transcript (Hindi - Moderate)\n# Subject: सामान्य विज्ञान एवं प्रौद्योगिकी (General Science & Technology)\n# Difficulty: Moderate | Rapid notes, abbreviations, irregular word spacing\n\nदैनिक जीवन में प्रकाश का परावर्तन और अपवर्तन महत्वपूर्ण भूमिका निभाता है। लेंस और दर्पण के नियमों पर कई आधुनिक उपकरण आधारित हैं।\n\nअवलोकन:\n- उत्तल लेंस प्रकाश किरणों को एक बिंदु पर केंद्रित करता है।\n- दूरबीन और सूक्ष्मदर्शी में विभिन्न फोकस दूरी के लेंसों का संयोजन प्रयुक्त होता है।\n- फाइबर ऑप्टिक्स में पूर्ण आंतरिक परावर्तन (TIR) के सिद्धांत पर तीव्र गति से डेटा संचार संभव होता है।\n\nसंचार क्रांति ने सूचनाओं के आदान-प्रदान को अभूतपूर्व गति प्रदान की है।",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 20,
+          "deletions": 611,
+          "insertions": 0,
+          "totalErrors": 631,
+          "referenceLength": 656,
+          "errorRate": 0.9619
+        },
+        "graphemeClusterCER": {
+          "substitutions": 20,
+          "deletions": 435,
+          "insertions": 0,
+          "totalErrors": 455,
+          "referenceLength": 480,
+          "errorRate": 0.9479
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 104,
+          "insertions": 0,
+          "totalErrors": 109,
+          "referenceLength": 109,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 15,
+          "insertions": 0,
+          "totalErrors": 17,
+          "referenceLength": 17,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-05",
+      "language": "Hindi",
+      "difficulty": "Moderate",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-05 Ground-Truth Transcript (Hindi - Moderate)\n# Subject: सामान्य विज्ञान एवं प्रौद्योगिकी (General Science & Technology)\n# Difficulty: Moderate | Rapid notes, abbreviations, irregular word spacing\n\nदैनिक जीवन में प्रकाश का परावर्तन और अपवर्तन महत्वपूर्ण भूमिका निभाता है। लेंस और दर्पण के नियमों पर कई आधुनिक उपकरण आधारित हैं।\n\nअवलोकन:\n- उत्तल लेंस प्रकाश किरणों को एक बिंदु पर केंद्रित करता है।\n- दूरबीन और सूक्ष्मदर्शी में विभिन्न फोकस दूरी के लेंसों का संयोजन प्रयुक्त होता है।\n- फाइबर ऑप्टिक्स में पूर्ण आंतरिक परावर्तन (TIR) के सिद्धांत पर तीव्र गति से डेटा संचार संभव होता है।\n\nसंचार क्रांति ने सूचनाओं के आदान-प्रदान को अभूतपूर्व गति प्रदान की है।\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-05 Ground-Truth Transcript (Hindi - Moderate)\n# Subject: सामान्य विज्ञान एवं प्रौद्योगिकी (General Science & Technology)\n# Difficulty: Moderate | Rapid notes, abbreviations, irregular word spacing\n\nदैनिक जीवन में प्रकाश का परावर्तन और अपवर्तन महत्वपूर्ण भूमिका निभाता है। लेंस और दर्पण के नियमों पर कई आधुनिक उपकरण आधारित हैं।\n\nअवलोकन:\n- उत्तल लेंस प्रकाश किरणों को एक बिंदु पर केंद्रित करता है।\n- दूरबीन और सूक्ष्मदर्शी में विभिन्न फोकस दूरी के लेंसों का संयोजन प्रयुक्त होता है।\n- फाइबर ऑप्टिक्स में पूर्ण आंतरिक परावर्तन (TIR) के सिद्धांत पर तीव्र गति से डेटा संचार संभव होता है।\n\nसंचार क्रांति ने सूचनाओं के आदान-प्रदान को अभूतपूर्व गति प्रदान की है।",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 36,
+          "deletions": 592,
+          "insertions": 0,
+          "totalErrors": 628,
+          "referenceLength": 656,
+          "errorRate": 0.9573
+        },
+        "graphemeClusterCER": {
+          "substitutions": 36,
+          "deletions": 416,
+          "insertions": 0,
+          "totalErrors": 452,
+          "referenceLength": 480,
+          "errorRate": 0.9417
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 104,
+          "insertions": 0,
+          "totalErrors": 109,
+          "referenceLength": 109,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 15,
+          "insertions": 0,
+          "totalErrors": 17,
+          "referenceLength": 17,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-06",
+      "language": "Hindi",
+      "difficulty": "Difficult",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-06 Ground-Truth Transcript (Hindi - Difficult)\n# Subject: स्वास्थ्य एवं औषध विज्ञान (Health & Pharmacology Notes)\n# Difficulty: Difficult | Broken shirorekha, doctor cursive, ink blot ambiguous region\n\nमानव शरीर में प्रतिरोधक क्षमता का संतुलन बनाए रखना स्वास्थ्य की पहली शर्त है। अत्यधिक तनाव और असंतुलित खान-पान से चयापचय प्रक्रिया बाधित होती है।\n\nचिकित्सीय निष्कर्ष:\nरक्तचाप और शर्करा स्तर की नियमित जांच से कई गंभीर व्याधियों से बचाव संभव है। जब शरीर में [illegible] की मात्रा असामान्य रूप से बढ़ जाती है, तब तत्काल औषधीय परामर्श लेना आवश्यक हो जाता है।\n\nपर्याप्त नींद और नियमित योगाभ्यास से मानसिक एकाग्रता में वृद्धि होती है।\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-06 Ground-Truth Transcript (Hindi - Difficult)\n# Subject: स्वास्थ्य एवं औषध विज्ञान (Health & Pharmacology Notes)\n# Difficulty: Difficult | Broken shirorekha, doctor cursive, ink blot ambiguous region\n\nमानव शरीर में प्रतिरोधक क्षमता का संतुलन बनाए रखना स्वास्थ्य की पहली शर्त है। अत्यधिक तनाव और असंतुलित खान-पान से चयापचय प्रक्रिया बाधित होती है।\n\nचिकित्सीय निष्कर्ष:\nरक्तचाप और शर्करा स्तर की नियमित जांच से कई गंभीर व्याधियों से बचाव संभव है। जब शरीर में [illegible] की मात्रा असामान्य रूप से बढ़ जाती है, तब तत्काल औषधीय परामर्श लेना आवश्यक हो जाता है।\n\nपर्याप्त नींद और नियमित योगाभ्यास से मानसिक एकाग्रता में वृद्धि होती है।",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 25,
+          "deletions": 573,
+          "insertions": 0,
+          "totalErrors": 598,
+          "referenceLength": 620,
+          "errorRate": 0.9645
+        },
+        "graphemeClusterCER": {
+          "substitutions": 25,
+          "deletions": 412,
+          "insertions": 0,
+          "totalErrors": 437,
+          "referenceLength": 459,
+          "errorRate": 0.9521
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 98,
+          "insertions": 0,
+          "totalErrors": 103,
+          "referenceLength": 103,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 14,
+          "insertions": 0,
+          "totalErrors": 16,
+          "referenceLength": 17,
+          "errorRate": 0.9412
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 1,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-06",
+      "language": "Hindi",
+      "difficulty": "Difficult",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-06 Ground-Truth Transcript (Hindi - Difficult)\n# Subject: स्वास्थ्य एवं औषध विज्ञान (Health & Pharmacology Notes)\n# Difficulty: Difficult | Broken shirorekha, doctor cursive, ink blot ambiguous region\n\nमानव शरीर में प्रतिरोधक क्षमता का संतुलन बनाए रखना स्वास्थ्य की पहली शर्त है। अत्यधिक तनाव और असंतुलित खान-पान से चयापचय प्रक्रिया बाधित होती है।\n\nचिकित्सीय निष्कर्ष:\nरक्तचाप और शर्करा स्तर की नियमित जांच से कई गंभीर व्याधियों से बचाव संभव है। जब शरीर में [illegible] की मात्रा असामान्य रूप से बढ़ जाती है, तब तत्काल औषधीय परामर्श लेना आवश्यक हो जाता है।\n\nपर्याप्त नींद और नियमित योगाभ्यास से मानसिक एकाग्रता में वृद्धि होती है।\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-06 Ground-Truth Transcript (Hindi - Difficult)\n# Subject: स्वास्थ्य एवं औषध विज्ञान (Health & Pharmacology Notes)\n# Difficulty: Difficult | Broken shirorekha, doctor cursive, ink blot ambiguous region\n\nमानव शरीर में प्रतिरोधक क्षमता का संतुलन बनाए रखना स्वास्थ्य की पहली शर्त है। अत्यधिक तनाव और असंतुलित खान-पान से चयापचय प्रक्रिया बाधित होती है।\n\nचिकित्सीय निष्कर्ष:\nरक्तचाप और शर्करा स्तर की नियमित जांच से कई गंभीर व्याधियों से बचाव संभव है। जब शरीर में [illegible] की मात्रा असामान्य रूप से बढ़ जाती है, तब तत्काल औषधीय परामर्श लेना आवश्यक हो जाता है।\n\nपर्याप्त नींद और नियमित योगाभ्यास से मानसिक एकाग्रता में वृद्धि होती है।",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 20,
+          "deletions": 575,
+          "insertions": 0,
+          "totalErrors": 595,
+          "referenceLength": 620,
+          "errorRate": 0.9597
+        },
+        "graphemeClusterCER": {
+          "substitutions": 20,
+          "deletions": 414,
+          "insertions": 0,
+          "totalErrors": 434,
+          "referenceLength": 459,
+          "errorRate": 0.9455
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 98,
+          "insertions": 0,
+          "totalErrors": 103,
+          "referenceLength": 103,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 0,
+          "deletions": 15,
+          "insertions": 0,
+          "totalErrors": 15,
+          "referenceLength": 17,
+          "errorRate": 0.8824
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 1,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-06",
+      "language": "Hindi",
+      "difficulty": "Difficult",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-06 Ground-Truth Transcript (Hindi - Difficult)\n# Subject: स्वास्थ्य एवं औषध विज्ञान (Health & Pharmacology Notes)\n# Difficulty: Difficult | Broken shirorekha, doctor cursive, ink blot ambiguous region\n\nमानव शरीर में प्रतिरोधक क्षमता का संतुलन बनाए रखना स्वास्थ्य की पहली शर्त है। अत्यधिक तनाव और असंतुलित खान-पान से चयापचय प्रक्रिया बाधित होती है।\n\nचिकित्सीय निष्कर्ष:\nरक्तचाप और शर्करा स्तर की नियमित जांच से कई गंभीर व्याधियों से बचाव संभव है। जब शरीर में [illegible] की मात्रा असामान्य रूप से बढ़ जाती है, तब तत्काल औषधीय परामर्श लेना आवश्यक हो जाता है।\n\nपर्याप्त नींद और नियमित योगाभ्यास से मानसिक एकाग्रता में वृद्धि होती है।\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-06 Ground-Truth Transcript (Hindi - Difficult)\n# Subject: स्वास्थ्य एवं औषध विज्ञान (Health & Pharmacology Notes)\n# Difficulty: Difficult | Broken shirorekha, doctor cursive, ink blot ambiguous region\n\nमानव शरीर में प्रतिरोधक क्षमता का संतुलन बनाए रखना स्वास्थ्य की पहली शर्त है। अत्यधिक तनाव और असंतुलित खान-पान से चयापचय प्रक्रिया बाधित होती है।\n\nचिकित्सीय निष्कर्ष:\nरक्तचाप और शर्करा स्तर की नियमित जांच से कई गंभीर व्याधियों से बचाव संभव है। जब शरीर में [illegible] की मात्रा असामान्य रूप से बढ़ जाती है, तब तत्काल औषधीय परामर्श लेना आवश्यक हो जाता है।\n\nपर्याप्त नींद और नियमित योगाभ्यास से मानसिक एकाग्रता में वृद्धि होती है।",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 34,
+          "deletions": 556,
+          "insertions": 0,
+          "totalErrors": 590,
+          "referenceLength": 620,
+          "errorRate": 0.9516
+        },
+        "graphemeClusterCER": {
+          "substitutions": 34,
+          "deletions": 395,
+          "insertions": 0,
+          "totalErrors": 429,
+          "referenceLength": 459,
+          "errorRate": 0.9346
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 98,
+          "insertions": 0,
+          "totalErrors": 103,
+          "referenceLength": 103,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 0,
+          "deletions": 15,
+          "insertions": 0,
+          "totalErrors": 15,
+          "referenceLength": 17,
+          "errorRate": 0.8824
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 1,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-07",
+      "language": "English",
+      "difficulty": "Easy",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-07 Ground-Truth Transcript (English - Easy)\n# Subject: Classical Mechanics & Newton's Laws\n# Difficulty: Easy | Clear textbook notes, neat handwriting\n\nClassical mechanics describes the motion of macroscopic objects. Isaac Newton formulated three fundamental laws of motion that govern physical interactions.\n\nSummary of Principles:\n1. First Law: An object remains at rest or in uniform motion unless acted upon by an external net force.\n2. Second Law: The rate of change of momentum is directly proportional to the applied force ($F = ma$).\n3. Third Law: For every action, there is an equal and opposite reaction.\n\nThese principles form the foundation of civil engineering, aeronautics, and mechanical systems.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-07 Ground-Truth Transcript (English - Easy)\n# Subject: Classical Mechanics & Newton's Laws\n# Difficulty: Easy | Clear textbook notes, neat handwriting\n\nClassical mechanics describes the motion of macroscopic objects. Isaac Newton formulated three fundamental laws of motion that govern physical interactions.\n\nSummary of Principles:\n1. First Law: An object remains at rest or in uniform motion unless acted upon by an external net force.\n2. Second Law: The rate of change of momentum is directly proportional to the applied force ($F = ma$).\n3. Third Law: For every action, there is an equal and opposite reaction.\n\nThese principles form the foundation of civil engineering, aeronautics, and mechanical systems.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 7,
+          "deletions": 666,
+          "insertions": 0,
+          "totalErrors": 673,
+          "referenceLength": 713,
+          "errorRate": 0.9439
+        },
+        "graphemeClusterCER": {
+          "substitutions": 7,
+          "deletions": 666,
+          "insertions": 0,
+          "totalErrors": 673,
+          "referenceLength": 713,
+          "errorRate": 0.9439
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 105,
+          "insertions": 0,
+          "totalErrors": 110,
+          "referenceLength": 110,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 21,
+          "insertions": 0,
+          "totalErrors": 23,
+          "referenceLength": 24,
+          "errorRate": 0.9583
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-07",
+      "language": "English",
+      "difficulty": "Easy",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-07 Ground-Truth Transcript (English - Easy)\n# Subject: Classical Mechanics & Newton's Laws\n# Difficulty: Easy | Clear textbook notes, neat handwriting\n\nClassical mechanics describes the motion of macroscopic objects. Isaac Newton formulated three fundamental laws of motion that govern physical interactions.\n\nSummary of Principles:\n1. First Law: An object remains at rest or in uniform motion unless acted upon by an external net force.\n2. Second Law: The rate of change of momentum is directly proportional to the applied force ($F = ma$).\n3. Third Law: For every action, there is an equal and opposite reaction.\n\nThese principles form the foundation of civil engineering, aeronautics, and mechanical systems.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-07 Ground-Truth Transcript (English - Easy)\n# Subject: Classical Mechanics & Newton's Laws\n# Difficulty: Easy | Clear textbook notes, neat handwriting\n\nClassical mechanics describes the motion of macroscopic objects. Isaac Newton formulated three fundamental laws of motion that govern physical interactions.\n\nSummary of Principles:\n1. First Law: An object remains at rest or in uniform motion unless acted upon by an external net force.\n2. Second Law: The rate of change of momentum is directly proportional to the applied force ($F = ma$).\n3. Third Law: For every action, there is an equal and opposite reaction.\n\nThese principles form the foundation of civil engineering, aeronautics, and mechanical systems.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 7,
+          "deletions": 668,
+          "insertions": 0,
+          "totalErrors": 675,
+          "referenceLength": 713,
+          "errorRate": 0.9467
+        },
+        "graphemeClusterCER": {
+          "substitutions": 7,
+          "deletions": 668,
+          "insertions": 0,
+          "totalErrors": 675,
+          "referenceLength": 713,
+          "errorRate": 0.9467
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 105,
+          "insertions": 0,
+          "totalErrors": 110,
+          "referenceLength": 110,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 22,
+          "insertions": 0,
+          "totalErrors": 24,
+          "referenceLength": 24,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-07",
+      "language": "English",
+      "difficulty": "Easy",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-07 Ground-Truth Transcript (English - Easy)\n# Subject: Classical Mechanics & Newton's Laws\n# Difficulty: Easy | Clear textbook notes, neat handwriting\n\nClassical mechanics describes the motion of macroscopic objects. Isaac Newton formulated three fundamental laws of motion that govern physical interactions.\n\nSummary of Principles:\n1. First Law: An object remains at rest or in uniform motion unless acted upon by an external net force.\n2. Second Law: The rate of change of momentum is directly proportional to the applied force ($F = ma$).\n3. Third Law: For every action, there is an equal and opposite reaction.\n\nThese principles form the foundation of civil engineering, aeronautics, and mechanical systems.\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-07 Ground-Truth Transcript (English - Easy)\n# Subject: Classical Mechanics & Newton's Laws\n# Difficulty: Easy | Clear textbook notes, neat handwriting\n\nClassical mechanics describes the motion of macroscopic objects. Isaac Newton formulated three fundamental laws of motion that govern physical interactions.\n\nSummary of Principles:\n1. First Law: An object remains at rest or in uniform motion unless acted upon by an external net force.\n2. Second Law: The rate of change of momentum is directly proportional to the applied force ($F = ma$).\n3. Third Law: For every action, there is an equal and opposite reaction.\n\nThese principles form the foundation of civil engineering, aeronautics, and mechanical systems.",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 14,
+          "deletions": 649,
+          "insertions": 0,
+          "totalErrors": 663,
+          "referenceLength": 713,
+          "errorRate": 0.9299
+        },
+        "graphemeClusterCER": {
+          "substitutions": 14,
+          "deletions": 649,
+          "insertions": 0,
+          "totalErrors": 663,
+          "referenceLength": 713,
+          "errorRate": 0.9299
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 105,
+          "insertions": 0,
+          "totalErrors": 110,
+          "referenceLength": 110,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 22,
+          "insertions": 0,
+          "totalErrors": 24,
+          "referenceLength": 24,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-08",
+      "language": "English",
+      "difficulty": "Moderate",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-08 Ground-Truth Transcript (English - Moderate)\n# Subject: Electrodynamics & Wave Equations\n# Difficulty: Moderate | Technical derivations, mathematical symbols and equations\n\nThe propagation of electromagnetic waves in a vacuum is governed by Maxwell's equations. In differential form, these relationships are expressed as:\n\n$$ \\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\epsilon_0} $$\n$$ \\nabla \\cdot \\vec{B} = 0 $$\n$$ \\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} $$\n$$ \\nabla \\times \\vec{B} = \\mu_0 \\vec{J} + \\mu_0 \\epsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} $$\n\nTaking the curl of both sides leads to the second-order wave equation:\n$$ \\nabla^2 \\vec{E} - \\frac{1}{c^2} \\frac{\\partial^2 \\vec{E}}{\\partial t^2} = 0 $$\n\nHere, the speed of light $c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}$, confirming light as an electromagnetic phenomenon.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-08 Ground-Truth Transcript (English - Moderate)\n# Subject: Electrodynamics & Wave Equations\n# Difficulty: Moderate | Technical derivations, mathematical symbols and equations\n\nThe propagation of electromagnetic waves in a vacuum is governed by Maxwell's equations. In differential form, these relationships are expressed as:\n\n$$ \\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\epsilon_0} $$\n$$ \\nabla \\cdot \\vec{B} = 0 $$\n$$ \\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} $$\n$$ \\nabla \\times \\vec{B} = \\mu_0 \\vec{J} + \\mu_0 \\epsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} $$\n\nTaking the curl of both sides leads to the second-order wave equation:\n$$ \\nabla^2 \\vec{E} - \\frac{1}{c^2} \\frac{\\partial^2 \\vec{E}}{\\partial t^2} = 0 $$\n\nHere, the speed of light $c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}$, confirming light as an electromagnetic phenomenon.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 11,
+          "deletions": 802,
+          "insertions": 0,
+          "totalErrors": 813,
+          "referenceLength": 849,
+          "errorRate": 0.9576
+        },
+        "graphemeClusterCER": {
+          "substitutions": 11,
+          "deletions": 802,
+          "insertions": 0,
+          "totalErrors": 813,
+          "referenceLength": 849,
+          "errorRate": 0.9576
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 114,
+          "insertions": 0,
+          "totalErrors": 119,
+          "referenceLength": 119,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 54,
+          "insertions": 0,
+          "totalErrors": 56,
+          "referenceLength": 57,
+          "errorRate": 0.9825
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-08",
+      "language": "English",
+      "difficulty": "Moderate",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-08 Ground-Truth Transcript (English - Moderate)\n# Subject: Electrodynamics & Wave Equations\n# Difficulty: Moderate | Technical derivations, mathematical symbols and equations\n\nThe propagation of electromagnetic waves in a vacuum is governed by Maxwell's equations. In differential form, these relationships are expressed as:\n\n$$ \\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\epsilon_0} $$\n$$ \\nabla \\cdot \\vec{B} = 0 $$\n$$ \\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} $$\n$$ \\nabla \\times \\vec{B} = \\mu_0 \\vec{J} + \\mu_0 \\epsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} $$\n\nTaking the curl of both sides leads to the second-order wave equation:\n$$ \\nabla^2 \\vec{E} - \\frac{1}{c^2} \\frac{\\partial^2 \\vec{E}}{\\partial t^2} = 0 $$\n\nHere, the speed of light $c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}$, confirming light as an electromagnetic phenomenon.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-08 Ground-Truth Transcript (English - Moderate)\n# Subject: Electrodynamics & Wave Equations\n# Difficulty: Moderate | Technical derivations, mathematical symbols and equations\n\nThe propagation of electromagnetic waves in a vacuum is governed by Maxwell's equations. In differential form, these relationships are expressed as:\n\n$$ \\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\epsilon_0} $$\n$$ \\nabla \\cdot \\vec{B} = 0 $$\n$$ \\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} $$\n$$ \\nabla \\times \\vec{B} = \\mu_0 \\vec{J} + \\mu_0 \\epsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} $$\n\nTaking the curl of both sides leads to the second-order wave equation:\n$$ \\nabla^2 \\vec{E} - \\frac{1}{c^2} \\frac{\\partial^2 \\vec{E}}{\\partial t^2} = 0 $$\n\nHere, the speed of light $c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}$, confirming light as an electromagnetic phenomenon.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 9,
+          "deletions": 804,
+          "insertions": 0,
+          "totalErrors": 813,
+          "referenceLength": 849,
+          "errorRate": 0.9576
+        },
+        "graphemeClusterCER": {
+          "substitutions": 9,
+          "deletions": 804,
+          "insertions": 0,
+          "totalErrors": 813,
+          "referenceLength": 849,
+          "errorRate": 0.9576
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 114,
+          "insertions": 0,
+          "totalErrors": 119,
+          "referenceLength": 119,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 55,
+          "insertions": 0,
+          "totalErrors": 57,
+          "referenceLength": 57,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-08",
+      "language": "English",
+      "difficulty": "Moderate",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-08 Ground-Truth Transcript (English - Moderate)\n# Subject: Electrodynamics & Wave Equations\n# Difficulty: Moderate | Technical derivations, mathematical symbols and equations\n\nThe propagation of electromagnetic waves in a vacuum is governed by Maxwell's equations. In differential form, these relationships are expressed as:\n\n$$ \\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\epsilon_0} $$\n$$ \\nabla \\cdot \\vec{B} = 0 $$\n$$ \\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} $$\n$$ \\nabla \\times \\vec{B} = \\mu_0 \\vec{J} + \\mu_0 \\epsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} $$\n\nTaking the curl of both sides leads to the second-order wave equation:\n$$ \\nabla^2 \\vec{E} - \\frac{1}{c^2} \\frac{\\partial^2 \\vec{E}}{\\partial t^2} = 0 $$\n\nHere, the speed of light $c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}$, confirming light as an electromagnetic phenomenon.\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-08 Ground-Truth Transcript (English - Moderate)\n# Subject: Electrodynamics & Wave Equations\n# Difficulty: Moderate | Technical derivations, mathematical symbols and equations\n\nThe propagation of electromagnetic waves in a vacuum is governed by Maxwell's equations. In differential form, these relationships are expressed as:\n\n$$ \\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\epsilon_0} $$\n$$ \\nabla \\cdot \\vec{B} = 0 $$\n$$ \\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} $$\n$$ \\nabla \\times \\vec{B} = \\mu_0 \\vec{J} + \\mu_0 \\epsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} $$\n\nTaking the curl of both sides leads to the second-order wave equation:\n$$ \\nabla^2 \\vec{E} - \\frac{1}{c^2} \\frac{\\partial^2 \\vec{E}}{\\partial t^2} = 0 $$\n\nHere, the speed of light $c = \\frac{1}{\\sqrt{\\mu_0 \\epsilon_0}}$, confirming light as an electromagnetic phenomenon.",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 16,
+          "deletions": 785,
+          "insertions": 0,
+          "totalErrors": 801,
+          "referenceLength": 849,
+          "errorRate": 0.9435
+        },
+        "graphemeClusterCER": {
+          "substitutions": 16,
+          "deletions": 785,
+          "insertions": 0,
+          "totalErrors": 801,
+          "referenceLength": 849,
+          "errorRate": 0.9435
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 114,
+          "insertions": 0,
+          "totalErrors": 119,
+          "referenceLength": 119,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 55,
+          "insertions": 0,
+          "totalErrors": 57,
+          "referenceLength": 57,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-09",
+      "language": "Mixed-Language",
+      "difficulty": "Moderate",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-09 Ground-Truth Transcript (Mixed-Language - Moderate)\n# Subject: Data Structures & Algorithms Lecture (Maranglish / Hinglish)\n# Difficulty: Moderate | Code-switching between Marathi, Hindi and English terminology\n\nआजच्या lecture मध्ये आपण Linked List आणि Array मधील trade-offs पाहिले.\n\nKey Takeaways:\n- Array मध्ये elements contiguous memory blocks मध्ये store होतात. त्यामुळे index access constant time $O(1)$ मध्ये मिळतो.\n- पण array ची size static असते; dynamic resizing साठी memory reallocation करावी लागते.\n- Linked list मध्ये dynamic allocation असते, परंतु pointer overhead मुळे जास्तीची memory लागते.\n- Insertion आणि deletion operations linked list मध्ये efficiently होतात जर node reference आधीपासून available असेल.\n\nAssignment: Singly linked list च्या reversal चा C++ code notebook मध्ये लिहून आणावा.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-09 Ground-Truth Transcript (Mixed-Language - Moderate)\n# Subject: Data Structures & Algorithms Lecture (Maranglish / Hinglish)\n# Difficulty: Moderate | Code-switching between Marathi, Hindi and English terminology\n\nआजच्या lecture मध्ये आपण Linked List आणि Array मधील trade-offs पाहिले.\n\nKey Takeaways:\n- Array मध्ये elements contiguous memory blocks मध्ये store होतात. त्यामुळे index access constant time $O(1)$ मध्ये मिळतो.\n- पण array ची size static असते; dynamic resizing साठी memory reallocation करावी लागते.\n- Linked list मध्ये dynamic allocation असते, परंतु pointer overhead मुळे जास्तीची memory लागते.\n- Insertion आणि deletion operations linked list मध्ये efficiently होतात जर node reference आधीपासून available असेल.\n\nAssignment: Singly linked list च्या reversal चा C++ code notebook मध्ये लिहून आणावा.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 10,
+          "deletions": 763,
+          "insertions": 0,
+          "totalErrors": 773,
+          "referenceLength": 810,
+          "errorRate": 0.9543
+        },
+        "graphemeClusterCER": {
+          "substitutions": 10,
+          "deletions": 690,
+          "insertions": 0,
+          "totalErrors": 700,
+          "referenceLength": 737,
+          "errorRate": 0.9498
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 111,
+          "insertions": 0,
+          "totalErrors": 116,
+          "referenceLength": 116,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 17,
+          "insertions": 0,
+          "totalErrors": 19,
+          "referenceLength": 20,
+          "errorRate": 0.95
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-09",
+      "language": "Mixed-Language",
+      "difficulty": "Moderate",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-09 Ground-Truth Transcript (Mixed-Language - Moderate)\n# Subject: Data Structures & Algorithms Lecture (Maranglish / Hinglish)\n# Difficulty: Moderate | Code-switching between Marathi, Hindi and English terminology\n\nआजच्या lecture मध्ये आपण Linked List आणि Array मधील trade-offs पाहिले.\n\nKey Takeaways:\n- Array मध्ये elements contiguous memory blocks मध्ये store होतात. त्यामुळे index access constant time $O(1)$ मध्ये मिळतो.\n- पण array ची size static असते; dynamic resizing साठी memory reallocation करावी लागते.\n- Linked list मध्ये dynamic allocation असते, परंतु pointer overhead मुळे जास्तीची memory लागते.\n- Insertion आणि deletion operations linked list मध्ये efficiently होतात जर node reference आधीपासून available असेल.\n\nAssignment: Singly linked list च्या reversal चा C++ code notebook मध्ये लिहून आणावा.\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-09 Ground-Truth Transcript (Mixed-Language - Moderate)\n# Subject: Data Structures & Algorithms Lecture (Maranglish / Hinglish)\n# Difficulty: Moderate | Code-switching between Marathi, Hindi and English terminology\n\nआजच्या lecture मध्ये आपण Linked List आणि Array मधील trade-offs पाहिले.\n\nKey Takeaways:\n- Array मध्ये elements contiguous memory blocks मध्ये store होतात. त्यामुळे index access constant time $O(1)$ मध्ये मिळतो.\n- पण array ची size static असते; dynamic resizing साठी memory reallocation करावी लागते.\n- Linked list मध्ये dynamic allocation असते, परंतु pointer overhead मुळे जास्तीची memory लागते.\n- Insertion आणि deletion operations linked list मध्ये efficiently होतात जर node reference आधीपासून available असेल.\n\nAssignment: Singly linked list च्या reversal चा C++ code notebook मध्ये लिहून आणावा.",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 8,
+          "deletions": 765,
+          "insertions": 0,
+          "totalErrors": 773,
+          "referenceLength": 810,
+          "errorRate": 0.9543
+        },
+        "graphemeClusterCER": {
+          "substitutions": 8,
+          "deletions": 692,
+          "insertions": 0,
+          "totalErrors": 700,
+          "referenceLength": 737,
+          "errorRate": 0.9498
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 111,
+          "insertions": 0,
+          "totalErrors": 116,
+          "referenceLength": 116,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 18,
+          "insertions": 0,
+          "totalErrors": 20,
+          "referenceLength": 20,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-09",
+      "language": "Mixed-Language",
+      "difficulty": "Moderate",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-09 Ground-Truth Transcript (Mixed-Language - Moderate)\n# Subject: Data Structures & Algorithms Lecture (Maranglish / Hinglish)\n# Difficulty: Moderate | Code-switching between Marathi, Hindi and English terminology\n\nआजच्या lecture मध्ये आपण Linked List आणि Array मधील trade-offs पाहिले.\n\nKey Takeaways:\n- Array मध्ये elements contiguous memory blocks मध्ये store होतात. त्यामुळे index access constant time $O(1)$ मध्ये मिळतो.\n- पण array ची size static असते; dynamic resizing साठी memory reallocation करावी लागते.\n- Linked list मध्ये dynamic allocation असते, परंतु pointer overhead मुळे जास्तीची memory लागते.\n- Insertion आणि deletion operations linked list मध्ये efficiently होतात जर node reference आधीपासून available असेल.\n\nAssignment: Singly linked list च्या reversal चा C++ code notebook मध्ये लिहून आणावा.\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-09 Ground-Truth Transcript (Mixed-Language - Moderate)\n# Subject: Data Structures & Algorithms Lecture (Maranglish / Hinglish)\n# Difficulty: Moderate | Code-switching between Marathi, Hindi and English terminology\n\nआजच्या lecture मध्ये आपण Linked List आणि Array मधील trade-offs पाहिले.\n\nKey Takeaways:\n- Array मध्ये elements contiguous memory blocks मध्ये store होतात. त्यामुळे index access constant time $O(1)$ मध्ये मिळतो.\n- पण array ची size static असते; dynamic resizing साठी memory reallocation करावी लागते.\n- Linked list मध्ये dynamic allocation असते, परंतु pointer overhead मुळे जास्तीची memory लागते.\n- Insertion आणि deletion operations linked list मध्ये efficiently होतात जर node reference आधीपासून available असेल.\n\nAssignment: Singly linked list च्या reversal चा C++ code notebook मध्ये लिहून आणावा.",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 16,
+          "deletions": 746,
+          "insertions": 0,
+          "totalErrors": 762,
+          "referenceLength": 810,
+          "errorRate": 0.9407
+        },
+        "graphemeClusterCER": {
+          "substitutions": 16,
+          "deletions": 673,
+          "insertions": 0,
+          "totalErrors": 689,
+          "referenceLength": 737,
+          "errorRate": 0.9349
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 111,
+          "insertions": 0,
+          "totalErrors": 116,
+          "referenceLength": 116,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 2,
+          "deletions": 18,
+          "insertions": 0,
+          "totalErrors": 20,
+          "referenceLength": 20,
+          "errorRate": 1
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 0,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-10",
+      "language": "Mixed-Language",
+      "difficulty": "Difficult",
+      "candidateId": "gemini-3.8-flash",
+      "rawText": "[Simulated dry-run output for gemini-3.8-flash]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-10 Ground-Truth Transcript (Mixed-Language - Difficult)\n# Subject: Database Management Systems & Architecture\n# Difficulty: Difficult | Mixed script, tables, diagram callouts, illegible region\n\nRDBMS architecture मध्ये relational schema आणि normalization अत्यंत महत्त्वाचे मानले जातात.\n\n| Component | Function | Memory Type |\n|---|---|---|\n| Buffer Pool | Caching disk pages | Volatile RAM |\n| Redo Log | Crash recovery & durability | Non-volatile Disk |\n| Query Optimizer | Cost-based plan generation | CPU Cache |\n\nलक्षात ठेवा: ACID properties पैकी Isolation level ठरवताना [illegible] concurrency anomalies निर्माण होऊ नयेत याची काळजी घ्यावी लागते.\n\n### Diagram Labels\n- Client Application Interface\n- SQL Parser & Semantic Checker\n- Storage Engine Layer\n- Data Files (*.ibd)\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-3.8-flash]",
+        "normalizedReference": "# GT-10 Ground-Truth Transcript (Mixed-Language - Difficult)\n# Subject: Database Management Systems & Architecture\n# Difficulty: Difficult | Mixed script, tables, diagram callouts, illegible region\n\nRDBMS architecture मध्ये relational schema आणि normalization अत्यंत महत्त्वाचे मानले जातात.\n\n| Component | Function | Memory Type |\n|---|---|---|\n| Buffer Pool | Caching disk pages | Volatile RAM |\n| Redo Log | Crash recovery & durability | Non-volatile Disk |\n| Query Optimizer | Cost-based plan generation | CPU Cache |\n\nलक्षात ठेवा: ACID properties पैकी Isolation level ठरवताना [illegible] concurrency anomalies निर्माण होऊ नयेत याची काळजी घ्यावी लागते.\n\n### Diagram Labels\n- Client Application Interface\n- SQL Parser & Semantic Checker\n- Storage Engine Layer\n- Data Files (*.ibd)",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-3.8-flash]",
+        "codePointCER": {
+          "substitutions": 12,
+          "deletions": 719,
+          "insertions": 0,
+          "totalErrors": 731,
+          "referenceLength": 766,
+          "errorRate": 0.9543
+        },
+        "graphemeClusterCER": {
+          "substitutions": 12,
+          "deletions": 677,
+          "insertions": 0,
+          "totalErrors": 689,
+          "referenceLength": 724,
+          "errorRate": 0.9517
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 112,
+          "insertions": 0,
+          "totalErrors": 117,
+          "referenceLength": 117,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 1,
+          "deletions": 12,
+          "insertions": 0,
+          "totalErrors": 13,
+          "referenceLength": 15,
+          "errorRate": 0.8667
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 1,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-10",
+      "language": "Mixed-Language",
+      "difficulty": "Difficult",
+      "candidateId": "gemini-4-argon",
+      "rawText": "[Simulated dry-run output for gemini-4-argon]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-10 Ground-Truth Transcript (Mixed-Language - Difficult)\n# Subject: Database Management Systems & Architecture\n# Difficulty: Difficult | Mixed script, tables, diagram callouts, illegible region\n\nRDBMS architecture मध्ये relational schema आणि normalization अत्यंत महत्त्वाचे मानले जातात.\n\n| Component | Function | Memory Type |\n|---|---|---|\n| Buffer Pool | Caching disk pages | Volatile RAM |\n| Redo Log | Crash recovery & durability | Non-volatile Disk |\n| Query Optimizer | Cost-based plan generation | CPU Cache |\n\nलक्षात ठेवा: ACID properties पैकी Isolation level ठरवताना [illegible] concurrency anomalies निर्माण होऊ नयेत याची काळजी घ्यावी लागते.\n\n### Diagram Labels\n- Client Application Interface\n- SQL Parser & Semantic Checker\n- Storage Engine Layer\n- Data Files (*.ibd)\n",
+        "hypothesisRaw": "[Simulated dry-run output for gemini-4-argon]",
+        "normalizedReference": "# GT-10 Ground-Truth Transcript (Mixed-Language - Difficult)\n# Subject: Database Management Systems & Architecture\n# Difficulty: Difficult | Mixed script, tables, diagram callouts, illegible region\n\nRDBMS architecture मध्ये relational schema आणि normalization अत्यंत महत्त्वाचे मानले जातात.\n\n| Component | Function | Memory Type |\n|---|---|---|\n| Buffer Pool | Caching disk pages | Volatile RAM |\n| Redo Log | Crash recovery & durability | Non-volatile Disk |\n| Query Optimizer | Cost-based plan generation | CPU Cache |\n\nलक्षात ठेवा: ACID properties पैकी Isolation level ठरवताना [illegible] concurrency anomalies निर्माण होऊ नयेत याची काळजी घ्यावी लागते.\n\n### Diagram Labels\n- Client Application Interface\n- SQL Parser & Semantic Checker\n- Storage Engine Layer\n- Data Files (*.ibd)",
+        "normalizedHypothesis": "[Simulated dry-run output for gemini-4-argon]",
+        "codePointCER": {
+          "substitutions": 10,
+          "deletions": 721,
+          "insertions": 0,
+          "totalErrors": 731,
+          "referenceLength": 766,
+          "errorRate": 0.9543
+        },
+        "graphemeClusterCER": {
+          "substitutions": 10,
+          "deletions": 679,
+          "insertions": 0,
+          "totalErrors": 689,
+          "referenceLength": 724,
+          "errorRate": 0.9517
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 112,
+          "insertions": 0,
+          "totalErrors": 117,
+          "referenceLength": 117,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 0,
+          "deletions": 13,
+          "insertions": 0,
+          "totalErrors": 13,
+          "referenceLength": 15,
+          "errorRate": 0.8667
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 1,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    },
+    {
+      "pageId": "GT-10",
+      "language": "Mixed-Language",
+      "difficulty": "Difficult",
+      "candidateId": "google-cloud-vision-document-text",
+      "rawText": "[Simulated dry-run output for google-cloud-vision-document-text]",
+      "latencyMs": 420,
+      "inputTokens": 1200,
+      "outputTokens": 150,
+      "scoreReport": {
+        "referenceRaw": "# GT-10 Ground-Truth Transcript (Mixed-Language - Difficult)\n# Subject: Database Management Systems & Architecture\n# Difficulty: Difficult | Mixed script, tables, diagram callouts, illegible region\n\nRDBMS architecture मध्ये relational schema आणि normalization अत्यंत महत्त्वाचे मानले जातात.\n\n| Component | Function | Memory Type |\n|---|---|---|\n| Buffer Pool | Caching disk pages | Volatile RAM |\n| Redo Log | Crash recovery & durability | Non-volatile Disk |\n| Query Optimizer | Cost-based plan generation | CPU Cache |\n\nलक्षात ठेवा: ACID properties पैकी Isolation level ठरवताना [illegible] concurrency anomalies निर्माण होऊ नयेत याची काळजी घ्यावी लागते.\n\n### Diagram Labels\n- Client Application Interface\n- SQL Parser & Semantic Checker\n- Storage Engine Layer\n- Data Files (*.ibd)\n",
+        "hypothesisRaw": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "normalizedReference": "# GT-10 Ground-Truth Transcript (Mixed-Language - Difficult)\n# Subject: Database Management Systems & Architecture\n# Difficulty: Difficult | Mixed script, tables, diagram callouts, illegible region\n\nRDBMS architecture मध्ये relational schema आणि normalization अत्यंत महत्त्वाचे मानले जातात.\n\n| Component | Function | Memory Type |\n|---|---|---|\n| Buffer Pool | Caching disk pages | Volatile RAM |\n| Redo Log | Crash recovery & durability | Non-volatile Disk |\n| Query Optimizer | Cost-based plan generation | CPU Cache |\n\nलक्षात ठेवा: ACID properties पैकी Isolation level ठरवताना [illegible] concurrency anomalies निर्माण होऊ नयेत याची काळजी घ्यावी लागते.\n\n### Diagram Labels\n- Client Application Interface\n- SQL Parser & Semantic Checker\n- Storage Engine Layer\n- Data Files (*.ibd)",
+        "normalizedHypothesis": "[Simulated dry-run output for google-cloud-vision-document-text]",
+        "codePointCER": {
+          "substitutions": 15,
+          "deletions": 702,
+          "insertions": 0,
+          "totalErrors": 717,
+          "referenceLength": 766,
+          "errorRate": 0.936
+        },
+        "graphemeClusterCER": {
+          "substitutions": 15,
+          "deletions": 660,
+          "insertions": 0,
+          "totalErrors": 675,
+          "referenceLength": 724,
+          "errorRate": 0.9323
+        },
+        "lexicalWER": {
+          "substitutions": 5,
+          "deletions": 112,
+          "insertions": 0,
+          "totalErrors": 117,
+          "referenceLength": 117,
+          "errorRate": 1
+        },
+        "punctuationErrorRate": {
+          "substitutions": 0,
+          "deletions": 13,
+          "insertions": 0,
+          "totalErrors": 13,
+          "referenceLength": 15,
+          "errorRate": 0.8667
+        },
+        "maskingDiagnostics": {
+          "maskedSpansCount": 1,
+          "unsupportedGuessesCount": 0,
+          "falseDeletionCount": 0
+        }
+      }
+    }
+  ],
+  "aggregates": [
+    {
+      "candidateId": "gemini-3.8-flash",
+      "successfulPages": 10,
+      "failedPages": 0,
+      "averageLatencyMs": 420,
+      "averageCodePointCER": 0.96,
+      "averageGraphemeClusterCER": 0.9513,
+      "averageLexicalWER": 1,
+      "averagePER": 0.9427,
+      "totalUnsupportedGuesses": 0,
+      "estimatedCostPer1kPagesUSD": 1.2,
+      "perLanguageCER": {
+        "marathi": 0.9517,
+        "hindi": 0.9517,
+        "english": 0.9507,
+        "mixed": 0.9507
+      }
+    },
+    {
+      "candidateId": "gemini-4-argon",
+      "successfulPages": 10,
+      "failedPages": 0,
+      "averageLatencyMs": 420,
+      "averageCodePointCER": 0.9593,
+      "averageGraphemeClusterCER": 0.9503,
+      "averageLexicalWER": 1,
+      "averagePER": 0.9638,
+      "totalUnsupportedGuesses": 0,
+      "estimatedCostPer1kPagesUSD": 3.2,
+      "perLanguageCER": {
+        "marathi": 0.9502,
+        "hindi": 0.9488,
+        "english": 0.9522,
+        "mixed": 0.9507
+      }
+    },
+    {
+      "candidateId": "google-cloud-vision-document-text",
+      "successfulPages": 10,
+      "failedPages": 0,
+      "averageLatencyMs": 420,
+      "averageCodePointCER": 0.9499,
+      "averageGraphemeClusterCER": 0.9393,
+      "averageLexicalWER": 1,
+      "averagePER": 0.9638,
+      "totalUnsupportedGuesses": 0,
+      "estimatedCostPer1kPagesUSD": 1.5,
+      "perLanguageCER": {
+        "marathi": 0.9432,
+        "hindi": 0.941,
+        "english": 0.9367,
+        "mixed": 0.9336
+      }
+    }
+  ]
+}

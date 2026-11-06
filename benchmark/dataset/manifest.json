@@ -18,7 +18,7 @@
       "characteristics": "Clear handwriting, formal script, shirorekha intact",
       "imageFile": null,
       "transcriptFile": "GT-01_transcript.txt",
-      "transcriptStatus": "pending",
+      "transcriptStatus": "ready",
       "ambiguousRegions": []
     },
     {
@@ -29,7 +29,7 @@
       "characteristics": "Rapid lecture notes, compound consonants (jodakshare)",
       "imageFile": null,
       "transcriptFile": "GT-02_transcript.txt",
-      "transcriptStatus": "pending",
+      "transcriptStatus": "ready",
       "ambiguousRegions": []
     },
     {
@@ -40,8 +40,15 @@
       "characteristics": "Cursive slant, broken lines, ink fading",
       "imageFile": null,
       "transcriptFile": "GT-03_transcript.txt",
-      "transcriptStatus": "pending",
-      "ambiguousRegions": []
+      "transcriptStatus": "ready",
+      "ambiguousRegions": [
+        {
+          "regionId": "GT03-R01",
+          "line": 4,
+          "description": "Faded ink smudge before टिकवून ठेवणे",
+          "annotation": "[illegible]"
+        }
+      ]
     },
     {
       "id": "GT-04",
@@ -51,7 +58,7 @@
       "characteristics": "Clear handwriting, formal Hindi study notes",
       "imageFile": null,
       "transcriptFile": "GT-04_transcript.txt",
-      "transcriptStatus": "pending",
+      "transcriptStatus": "ready",
       "ambiguousRegions": []
     },
     {
@@ -62,7 +69,7 @@
       "characteristics": "Everyday casual notes, abbreviations, irregular spacing",
       "imageFile": null,
       "transcriptFile": "GT-05_transcript.txt",
-      "transcriptStatus": "pending",
+      "transcriptStatus": "ready",
       "ambiguousRegions": []
     },
     {
@@ -73,8 +80,15 @@
       "characteristics": "Broken shirorekha, quick cursive, doctor-style handwriting",
       "imageFile": null,
       "transcriptFile": "GT-06_transcript.txt",
-      "transcriptStatus": "pending",
-      "ambiguousRegions": []
+      "transcriptStatus": "ready",
+      "ambiguousRegions": [
+        {
+          "regionId": "GT06-R01",
+          "line": 6,
+          "description": "Ink blot preceding की मात्रा असामान्य",
+          "annotation": "[illegible]"
+        }
+      ]
     },
     {
       "id": "GT-07",
@@ -84,7 +98,7 @@
       "characteristics": "Neat textbook summary notes, clear printing",
       "imageFile": null,
       "transcriptFile": "GT-07_transcript.txt",
-      "transcriptStatus": "pending",
+      "transcriptStatus": "ready",
       "ambiguousRegions": []
     },
     {
@@ -95,7 +109,7 @@
       "characteristics": "Technical derivations, mathematical formulas, symbols",
       "imageFile": null,
       "transcriptFile": "GT-08_transcript.txt",
-      "transcriptStatus": "pending",
+      "transcriptStatus": "ready",
       "ambiguousRegions": []
     },
     {
@@ -106,7 +120,7 @@
       "characteristics": "Hinglish / Maranglish mixed notes, code-switching",
       "imageFile": null,
       "transcriptFile": "GT-09_transcript.txt",
-      "transcriptStatus": "pending",
+      "transcriptStatus": "ready",
       "ambiguousRegions": []
     },
     {
@@ -117,8 +131,15 @@
       "characteristics": "Mixed script with hand-drawn tables and annotated diagrams",
       "imageFile": null,
       "transcriptFile": "GT-10_transcript.txt",
-      "transcriptStatus": "pending",
-      "ambiguousRegions": []
+      "transcriptStatus": "ready",
+      "ambiguousRegions": [
+        {
+          "regionId": "GT10-R01",
+          "line": 10,
+          "description": "Cut-off edge word preceding concurrency anomalies",
+          "annotation": "[illegible]"
+        }
+      ]
     },
     {
       "id": "Q-01",

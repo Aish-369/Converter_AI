@@ -1,0 +1,13 @@
+# GT-09 Ground-Truth Transcript (Mixed-Language - Moderate)
+# Subject: Data Structures & Algorithms Lecture (Maranglish / Hinglish)
+# Difficulty: Moderate | Code-switching between Marathi, Hindi and English terminology
+
+आजच्या lecture मध्ये आपण Linked List आणि Array मधील trade-offs पाहिले.
+
+Key Takeaways:
+- Array मध्ये elements contiguous memory blocks मध्ये store होतात. त्यामुळे index access constant time $O(1)$ मध्ये मिळतो.
+- पण array ची size static असते; dynamic resizing साठी memory reallocation करावी लागते.
+- Linked list मध्ये dynamic allocation असते, परंतु pointer overhead मुळे जास्तीची memory लागते.
+- Insertion आणि deletion operations linked list मध्ये efficiently होतात जर node reference आधीपासून available असेल.
+
+Assignment: Singly linked list च्या reversal चा C++ code notebook मध्ये लिहून आणावा.
