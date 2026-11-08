@@ -303,6 +303,44 @@ export class VaultStorageService {
     return newPage;
   }
 
+  public static addMultiplePagesToProject(
+    projectId: string,
+    pagesData: Array<Omit<NotePage, 'id' | 'createdAt' | 'updatedAt'>>
+  ): NotePage[] {
+    const vault = this.loadVault();
+    const project = vault.projects.find((p) => p.id === projectId);
+    if (!project) throw new Error('Project not found');
+
+    const createdPages: NotePage[] = [];
+    const timestamp = Date.now();
+
+    for (let i = 0; i < pagesData.length; i++) {
+      const data = pagesData[i];
+      const newPage: NotePage = {
+        ...data,
+        id: `page-${timestamp}-${i}-${Math.random().toString(36).substr(2, 4)}`,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+
+      project.pages.push(newPage);
+      createdPages.push(newPage);
+
+      // Assign to target chapter or first chapter
+      if (project.chapters.length > 0) {
+        const targetChap = project.chapters.find((c) => c.id === newPage.chapterId) || project.chapters[0];
+        newPage.chapterId = targetChap.id;
+        if (!targetChap.pageIds.includes(newPage.id)) {
+          targetChap.pageIds.push(newPage.id);
+        }
+      }
+    }
+
+    project.updatedAt = new Date().toISOString();
+    this.saveVault(vault);
+    return createdPages;
+  }
+
   public static updatePage(projectId: string, pageId: string, updates: Partial<NotePage>): NotePage | undefined {
     const vault = this.loadVault();
     const project = vault.projects.find((p) => p.id === projectId);

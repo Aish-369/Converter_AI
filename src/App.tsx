@@ -25,12 +25,14 @@ import {
   Award,
   Eye,
   ShieldCheck,
+  UploadCloud,
 } from 'lucide-react';
 
 import { Project, NotePage, IndicLanguage } from './types';
 import { VaultStorageService } from './services/storage';
 import { ProjectManager } from './components/ProjectManager';
 import { PageUploader } from './components/PageUploader';
+import { BulkDropZone } from './components/BulkDropZone';
 import { DualPaneReview } from './components/DualPaneReview';
 import { ChapterOrganizer } from './components/ChapterOrganizer';
 import { PublishModal } from './components/PublishModal';
@@ -45,6 +47,8 @@ export default function App() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [activeProjectId, setActiveProjectId] = useState<string>('');
   const [activePageId, setActivePageId] = useState<string>('');
+  const [workspaceDragOver, setWorkspaceDragOver] = useState(false);
+  const workspaceDragCounter = React.useRef(0);
 
   // Modals
   const [showPublishModal, setShowPublishModal] = useState(false);
@@ -123,6 +127,82 @@ export default function App() {
     const newPage = VaultStorageService.addPageToProject(activeProject.id, pageData);
     setProjects(VaultStorageService.getProjects());
     setActivePageId(newPage.id);
+  };
+
+  const handleAddMultiplePages = (
+    pagesData: Array<Omit<NotePage, 'id' | 'createdAt' | 'updatedAt'>>
+  ) => {
+    if (!activeProject || pagesData.length === 0) return;
+    const createdPages = VaultStorageService.addMultiplePagesToProject(activeProject.id, pagesData);
+    const updated = VaultStorageService.getProjects();
+    setProjects(updated);
+    if (createdPages.length > 0) {
+      setActivePageId(createdPages[0].id);
+    }
+  };
+
+  const handleWorkspaceDragEnter = (e: React.DragEvent) => {
+    e.preventDefault();
+    workspaceDragCounter.current += 1;
+    if (e.dataTransfer.items && e.dataTransfer.items.length > 0) {
+      setWorkspaceDragOver(true);
+    }
+  };
+
+  const handleWorkspaceDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    workspaceDragCounter.current -= 1;
+    if (workspaceDragCounter.current <= 0) {
+      setWorkspaceDragOver(false);
+      workspaceDragCounter.current = 0;
+    }
+  };
+
+  const handleWorkspaceDrop = async (e: React.DragEvent) => {
+    e.preventDefault();
+    setWorkspaceDragOver(false);
+    workspaceDragCounter.current = 0;
+
+    if (!activeProject || !e.dataTransfer.files || e.dataTransfer.files.length === 0) return;
+
+    const files = Array.from(e.dataTransfer.files).filter(
+      (f) => f.type.startsWith('image/') || /\.(png|jpe?g|webp|svg|bmp|tiff)$/i.test(f.name)
+    );
+    if (files.length === 0) return;
+
+    const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+    const sortedFiles = [...files].sort((a, b) => collator.compare(a.name, b.name));
+
+    const newPagesData: Array<Omit<NotePage, 'id' | 'createdAt' | 'updatedAt'>> = [];
+    const baseCount = activeProject.pages.length;
+
+    for (let i = 0; i < sortedFiles.length; i++) {
+      const file = sortedFiles[i];
+      const base64 = await new Promise<string>((resolve) => {
+        const reader = new FileReader();
+        reader.onload = (ev) => resolve(ev.target?.result as string);
+        reader.readAsDataURL(file);
+      });
+
+      const rawName = file.name.replace(/\.[^/.]+$/, '').replace(/[_-]+/g, ' ').trim();
+      const pageNum = baseCount + i + 1;
+      const title = /^\d+$/.test(rawName) ? `पृष्ठ ${rawName}` : rawName || `पृष्ठ ${pageNum}`;
+
+      newPagesData.push({
+        pageNumber: pageNum,
+        title,
+        imageBase64: base64,
+        imageFileName: file.name,
+        text: '',
+        status: 'draft',
+        illegibleCount: 0,
+        charCount: 0,
+        wordCount: 0,
+        chapterId: activeProject.chapters[0]?.id,
+      });
+    }
+
+    handleAddMultiplePages(newPagesData);
   };
 
   const handleUpdatePage = (updates: Partial<NotePage>) => {
@@ -344,7 +424,31 @@ export default function App() {
 
       {/* Main Content Area */}
       {activeMainTab === 'studio' && activeProject && (
-        <div className="flex-1 flex flex-col overflow-hidden">
+        <div
+          onDragEnter={handleWorkspaceDragEnter}
+          onDragLeave={handleWorkspaceDragLeave}
+          onDragOver={(e) => e.preventDefault()}
+          onDrop={handleWorkspaceDrop}
+          className="relative flex-1 flex flex-col overflow-hidden"
+        >
+          {/* Full Studio Drag & Drop Overlay */}
+          {workspaceDragOver && (
+            <div className="absolute inset-0 z-50 bg-blue-600/90 backdrop-blur-md flex flex-col items-center justify-center text-white border-4 border-dashed border-white m-3 rounded-2xl pointer-events-none transition-all shadow-2xl animate-in fade-in zoom-in-95">
+              <div className="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center mb-4 shadow-lg animate-bounce">
+                <UploadCloud className="w-12 h-12 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-1.5 tracking-tight">
+                हस्तलिखित नोट्स येथे सोडा (Drop Scans Here)
+              </h3>
+              <p className="text-sm opacity-90 max-w-lg text-center leading-relaxed">
+                सर्व प्रतिमा आपोआप वाचल्या जातील आणि <strong>'{activeProject.title}'</strong> मध्ये स्वतंत्र NotePage नोंदी अनुक्रमाने तयार होतील.
+              </p>
+              <div className="mt-4 px-3.5 py-1.5 bg-white/25 rounded-full text-xs font-semibold">
+                PNG, JPG, WEBP, SVG समर्थित · स्वयंचलित अनुक्रमांक
+              </div>
+            </div>
+          )}
+
           {/* Project Manager Bar */}
           <ProjectManager
             projects={projects}
@@ -356,6 +460,13 @@ export default function App() {
             onExportVault={handleExportVault}
             onImportVault={handleImportVault}
             onResetVault={handleResetVault}
+          />
+
+          {/* Dedicated Bulk Drag & Drop Zone */}
+          <BulkDropZone
+            project={activeProject}
+            onAddMultiplePages={handleAddMultiplePages}
+            onSelectPage={setActivePageId}
           />
 
           {/* Main Workspace Body */}
@@ -382,23 +493,31 @@ export default function App() {
                 />
               ) : (
                 <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-slate-50 dark:bg-slate-950">
-                  <div className="w-16 h-16 rounded-2xl bg-blue-100 dark:bg-blue-950 text-blue-600 flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-blue-100 dark:bg-blue-950 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
                     <FileText className="w-8 h-8" />
                   </div>
                   <h3 className="font-bold text-base text-slate-900 dark:text-slate-100 mb-1">
                     या प्रकल्पात अद्याप पृष्ठे नाहीत
                   </h3>
                   <p className="text-xs text-slate-500 max-w-sm mb-4">
-                    खालील 'पृष्ठ जोडा' बटणावर क्लिक करून हस्तलिखित नोट्सची पाने जोडा किंवा 30-पृष्ठ सॅम्पल डेटासेटमधून पृष्ठ निवडा.
+                    वर दिलेल्या बल्क ड्रॉप झोनमध्ये हस्तलिखित नोट्स ड्रॅग आणि ड्रॉप करा, किंवा खालील 'पृष्ठ जोडा' बटणावर क्लिक करा.
                   </p>
-                  <PageUploader project={activeProject} onAddPage={handleAddPage} />
+                  <PageUploader
+                    project={activeProject}
+                    onAddPage={handleAddPage}
+                    onAddMultiplePages={handleAddMultiplePages}
+                  />
                 </div>
               )}
 
               {/* Bottom Thumbnail Navigation Strip */}
               <div className="h-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 py-2 flex items-center gap-3 shrink-0 overflow-x-auto">
                 <div className="shrink-0 flex items-center pr-2 border-r border-slate-200 dark:border-slate-800">
-                  <PageUploader project={activeProject} onAddPage={handleAddPage} />
+                  <PageUploader
+                    project={activeProject}
+                    onAddPage={handleAddPage}
+                    onAddMultiplePages={handleAddMultiplePages}
+                  />
                 </div>
 
                 <div className="flex items-center gap-2 overflow-x-auto py-1">

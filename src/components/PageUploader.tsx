@@ -16,9 +16,10 @@ import { NotePage, Project } from '../types';
 interface PageUploaderProps {
   project: Project;
   onAddPage: (pageData: Omit<NotePage, 'id' | 'createdAt' | 'updatedAt'>) => void;
+  onAddMultiplePages?: (pagesData: Array<Omit<NotePage, 'id' | 'createdAt' | 'updatedAt'>>) => void;
 }
 
-export const PageUploader: React.FC<PageUploaderProps> = ({ project, onAddPage }) => {
+export const PageUploader: React.FC<PageUploaderProps> = ({ project, onAddPage, onAddMultiplePages }) => {
   const [activeMode, setActiveMode] = useState<'upload' | 'camera' | 'sample'>('upload');
   const [dragOver, setDragOver] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -97,17 +98,32 @@ export const PageUploader: React.FC<PageUploaderProps> = ({ project, onAddPage }
     }
   };
 
-  const handleFiles = (files: FileList | null) => {
+  const handleFiles = async (files: FileList | null) => {
     if (!files || files.length === 0) return;
 
-    Array.from(files).forEach((file, idx) => {
-      if (!file.type.startsWith('image/')) return;
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const base64 = e.target?.result as string;
-        onAddPage({
-          pageNumber: project.pages.length + 1 + idx,
-          title: file.name.replace(/\.[^/.]+$/, ''),
+    const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
+    const imageFiles = Array.from(files)
+      .filter((file) => file.type.startsWith('image/'))
+      .sort((a, b) => collator.compare(a.name, b.name));
+
+    if (imageFiles.length === 0) return;
+
+    if (onAddMultiplePages) {
+      const newPagesData: Array<Omit<NotePage, 'id' | 'createdAt' | 'updatedAt'>> = [];
+      const baseCount = project.pages.length;
+
+      for (let idx = 0; idx < imageFiles.length; idx++) {
+        const file = imageFiles[idx];
+        const base64 = await new Promise<string>((resolve) => {
+          const reader = new FileReader();
+          reader.onload = (e) => resolve(e.target?.result as string);
+          reader.readAsDataURL(file);
+        });
+
+        const rawName = file.name.replace(/\.[^/.]+$/, '').replace(/[_-]+/g, ' ').trim();
+        newPagesData.push({
+          pageNumber: baseCount + 1 + idx,
+          title: rawName || `पृष्ठ ${baseCount + 1 + idx}`,
           imageBase64: base64,
           imageFileName: file.name,
           text: '',
@@ -117,9 +133,32 @@ export const PageUploader: React.FC<PageUploaderProps> = ({ project, onAddPage }
           wordCount: 0,
           chapterId: project.chapters[0]?.id,
         });
-      };
-      reader.readAsDataURL(file);
-    });
+      }
+
+      onAddMultiplePages(newPagesData);
+    } else {
+      for (let idx = 0; idx < imageFiles.length; idx++) {
+        const file = imageFiles[idx];
+        const base64 = await new Promise<string>((resolve) => {
+          const reader = new FileReader();
+          reader.onload = (e) => resolve(e.target?.result as string);
+          reader.readAsDataURL(file);
+        });
+
+        onAddPage({
+          pageNumber: project.pages.length + 1 + idx,
+          title: file.name.replace(/\.[^/.]+$/, '').replace(/[_-]+/g, ' ').trim(),
+          imageBase64: base64,
+          imageFileName: file.name,
+          text: '',
+          status: 'draft',
+          illegibleCount: 0,
+          charCount: 0,
+          wordCount: 0,
+          chapterId: project.chapters[0]?.id,
+        });
+      }
+    }
 
     setShowModal(false);
   };
